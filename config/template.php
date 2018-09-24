@@ -32,4 +32,11 @@ return [
     'taglib_begin' => '{',
     // 标签库标签结束标记
     'taglib_end'   => '}',
+    //替换模板字符
+    'tpl_replace_string'  =>  [
+        '__STATIC__'=>'/static',
+        '__JQ__' => '/static/jquery',
+        '__BOOT__'=>'/static/bootstrap4',
+        '__CSS__'=>"static/style"
+    ],
 ];

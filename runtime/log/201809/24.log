@@ -1,0 +1,1035 @@
+---------------------------------------------------------------
+[ 2018-09-24T15:24:30+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[ error ] [0]模板文件不存在:D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php
+---------------------------------------------------------------
+[ 2018-09-24T15:25:01+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.106310s] [吞吐率：9.41req/s] [内存消耗：2,188.61kb] [文件加载：64]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ error ] [0]模板文件不存在:D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php[D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\view\driver\Php.php:76]
+---------------------------------------------------------------
+[ 2018-09-24T15:25:35+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.094308s] [吞吐率：10.60req/s] [内存消耗：2,134.61kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:41:44+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.090613s] [吞吐率：11.04req/s] [内存消耗：2,134.61kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:42:19+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.086036s] [吞吐率：11.62req/s] [内存消耗：2,134.61kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:42:30+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.087736s] [吞吐率：11.40req/s] [内存消耗：2,134.61kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:42:46+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.090569s] [吞吐率：11.04req/s] [内存消耗：2,134.61kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:43:28+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.093723s] [吞吐率：10.67req/s] [内存消耗：2,134.61kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.php [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:44:15+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.109621s] [吞吐率：9.12req/s] [内存消耗：2,277.11kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:47:07+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.104402s] [吞吐率：9.58req/s] [内存消耗：2,280.97kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T15:55:45+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[ error ] [0]方法不存在: app\index\widget\Common::menNav()
+---------------------------------------------------------------
+[ 2018-09-24T15:55:54+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.111252s] [吞吐率：8.99req/s] [内存消耗：2,173.05kb] [文件加载：65]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]方法不存在: app\index\widget\Common::menNav()[D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\Container.php:356]
+---------------------------------------------------------------
+[ 2018-09-24T15:57:30+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.117394s] [吞吐率：8.52req/s] [内存消耗：2,158.71kb] [文件加载：64]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]类不存在:app\index\widget\Common[D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\App.php:720]
+---------------------------------------------------------------
+[ 2018-09-24T15:57:46+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.121147s] [吞吐率：8.25req/s] [内存消耗：2,173.05kb] [文件加载：65]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]方法不存在: app\index\widget\Common::menNav()[D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\Container.php:356]
+---------------------------------------------------------------
+[ 2018-09-24T15:57:59+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.310348s] [吞吐率：3.22req/s] [内存消耗：2,373.16kb] [文件加载：67]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]致命错误: Maximum function nesting level of '256' reached, aborting![D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\Container.php:107]
+---------------------------------------------------------------
+[ 2018-09-24T15:58:28+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.122506s] [吞吐率：8.16req/s] [内存消耗：2,100.89kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T15:58:38+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.125001s] [吞吐率：8.00req/s] [内存消耗：2,100.89kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T15:59:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.099537s] [吞吐率：10.05req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:48+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.115529s] [吞吐率：8.66req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:58+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.096934s] [吞吐率：10.32req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:59+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.105902s] [吞吐率：9.44req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:59+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.093140s] [吞吐率：10.74req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:59+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.100204s] [吞吐率：9.98req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:59+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.106145s] [吞吐率：9.42req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:00:59+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.096027s] [吞吐率：10.41req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:01:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/index/widget
+[运行时间：0.104612s] [吞吐率：9.56req/s] [内存消耗：2,101.28kb] [文件加载：61]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+---------------------------------------------------------------
+[ 2018-09-24T16:01:22+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.122008s] [吞吐率：8.20req/s] [内存消耗：2,280.58kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:01:47+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.103326s] [吞吐率：9.68req/s] [内存消耗：2,281.05kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:02:00+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.134034s] [吞吐率：7.46req/s] [内存消耗：2,346.73kb] [文件加载：66]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]类不存在:app\index\widget\Index[D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\App.php:720]
+---------------------------------------------------------------
+[ 2018-09-24T16:02:12+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.107956s] [吞吐率：9.26req/s] [内存消耗：2,283.49kb] [文件加载：63]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:03:48+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.119670s] [吞吐率：8.36req/s] [内存消耗：2,285.41kb] [文件加载：64]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:04:01+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.298871s] [吞吐率：3.35req/s] [内存消耗：2,195.70kb] [文件加载：65]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]致命错误: Maximum function nesting level of '256' reached, aborting![D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\Container.php:107]
+---------------------------------------------------------------
+[ 2018-09-24T16:04:54+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.122491s] [吞吐率：8.16req/s] [内存消耗：2,292.85kb] [文件加载：65]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\widget\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:06:36+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.174918s] [吞吐率：5.72req/s] [内存消耗：2,346.73kb] [文件加载：66]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ error ] [0]类不存在:app\index\widget\Widgets[D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\library\think\App.php:720]
+---------------------------------------------------------------
+[ 2018-09-24T16:06:58+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.130273s] [吞吐率：7.68req/s] [内存消耗：2,286.20kb] [文件加载：64]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.126632s] [吞吐率：7.90req/s] [内存消耗：2,285.42kb] [文件加载：64]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/public/static/bootstrap4/css/bootstrap-reboot.css
+[运行时间：0.082641s] [吞吐率：12.10req/s] [内存消耗：1,530.97kb] [文件加载：50]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/public/static/bootstrap4/js/bootstrap.bundle.js
+[运行时间：0.096475s] [吞吐率：10.37req/s] [内存消耗：1,530.97kb] [文件加载：50]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/public/static/jquery/jquery-3.3.1.min.js
+[运行时间：0.088300s] [吞吐率：11.33req/s] [内存消耗：1,530.58kb] [文件加载：50]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/public/static/bootstrap4/css/bootstrap.css
+[运行时间：0.111706s] [吞吐率：8.95req/s] [内存消耗：1,530.96kb] [文件加载：50]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/public/static/bootstrap4/css/bootstrap-grid.css
+[运行时间：0.129240s] [吞吐率：7.74req/s] [内存消耗：1,530.97kb] [文件加载：50]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[ 2018-09-24T16:23:18+08:00 ] 127.0.0.1 GET www.thinkshops.com/public/static/bootstrap4/js/bootstrap.js
+[运行时间：0.152694s] [吞吐率：6.55req/s] [内存消耗：1,530.96kb] [文件加载：50]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+---------------------------------------------------------------
+[ 2018-09-24T16:28:08+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.128277s] [吞吐率：7.80req/s] [内存消耗：2,286.36kb] [文件加载：64]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:28:12+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.099056s] [吞吐率：10.10req/s] [内存消耗：2,107.32kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'accept' => '*/*',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept-encoding' => 'gzip, deflate',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cache-control' => 'no-cache',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:28:13+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.097701s] [吞吐率：10.24req/s] [内存消耗：2,108.38kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'cache-control' => 'max-age=0',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/64.0.3282.140 Safari/537.36 Edge/17.17134',
+  'accept-language' => 'zh-Hans-CN,zh-Hans;q=0.5',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'upgrade-insecure-requests' => '1',
+  'accept-encoding' => 'gzip, deflate',
+  'host' => 'www.thinkshops.com',
+  'connection' => 'Keep-Alive',
+  'cookie' => 'pgv_si=s9937480704; pgv_pvi=3550954496',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:28:52+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.097259s] [吞吐率：10.28req/s] [内存消耗：2,107.53kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:29:01+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.099816s] [吞吐率：10.02req/s] [内存消耗：2,107.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:29:02+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.087902s] [吞吐率：11.38req/s] [内存消耗：2,107.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:29:02+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.086531s] [吞吐率：11.56req/s] [内存消耗：2,107.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:29:05+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.099031s] [吞吐率：10.10req/s] [内存消耗：2,107.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:29:10+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.104170s] [吞吐率：9.60req/s] [内存消耗：2,107.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]
+---------------------------------------------------------------
+[ 2018-09-24T16:29:15+08:00 ] 127.0.0.1 GET www.thinkshops.com/
+[运行时间：0.103174s] [吞吐率：9.69req/s] [内存消耗：2,107.98kb] [文件加载：62]
+[ info ] [ LANG ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.thinkshops.com',
+  'connection' => 'keep-alive',
+  'cache-control' => 'max-age=0',
+  'upgrade-insecure-requests' => '1',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+  'accept-encoding' => 'gzip, deflate',
+  'accept-language' => 'zh-CN,zh;q=0.9,zh-TW;q=0.8',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\index\index.html [ array (
+) ]
+[ info ] [ VIEW ] D:\Vc_PHP\Apache24\htdocs\tp5.1\ThinkShops\application\index\view\common\meunav.html [ array (
+) ]

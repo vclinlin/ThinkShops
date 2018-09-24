@@ -7,6 +7,6 @@ class Index extends Controller
 {
     public function index()
     {
-        return $this->engine('php')->fetch('index');
+        return $this->fetch('index');
     }
 }

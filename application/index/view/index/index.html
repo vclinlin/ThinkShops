@@ -1,6 +1,6 @@
 {extend name="base" /}
 
-{block name="title"}主页{/block}
+{block name="title"}后台管理{/block}
 
 {block name="static"}
 
@@ -25,14 +25,13 @@
         </ul>
         <ul class="layui-nav right" lay-filter="">
             <li class="layui-nav-item">
-                <a href="javascript:;">admin</a>
+                <a href="javascript:;">{$data.user_name}</a>
                 <dl class="layui-nav-child"> <!-- 二级菜单 -->
-                    <dd><a onclick="x_admin_show('个人信息','http://www.baidu.com')">个人信息</a></dd>
-                    <dd><a onclick="x_admin_show('切换帐号','http://www.baidu.com')">切换帐号</a></dd>
-                    <dd><a href="./login.html">退出</a></dd>
+                    <dd><a onclick="x_admin_show('个人信息','{:url('index/index/personal')}')">个人信息</a></dd>
+                    <dd><a href="{:url('index/index/logOut')}">退出</a></dd>
                 </dl>
             </li>
-            <li class="layui-nav-item to-index"><a href="/">前台首页</a></li>
+            <li class="layui-nav-item to-index"><a href="http://www.shops.com">前台首页</a></li>
         </ul>
 
     </div>

@@ -58,6 +58,10 @@ class Index extends Controller
             ]);
             return;
         }
+        $model->where([
+            'user_id'=>$user_id,
+            'pass'=>$pass
+        ])->setInc('count_num');
         $session = new Session();
         $session->set('admin_user',$user_id);
         $session->set('admin_pass',$pass);
@@ -120,5 +124,41 @@ class Index extends Controller
         unset($data['pass']);
         $this->assign('data',$data);
         return $this->fetch();
+    }
+
+    public function ChangePassword($pass,$NewPassword)
+    {
+        $model = new Admin_user();
+        $session = new Session();
+        if(md5(md5($session->  //客户端验证
+            get('admin_user')).md5($pass).md5('!@#$%^&*()_+'))!=$session->get('admin_pass')
+        )
+        {
+            echo json_encode([
+                "msg"=>'密码错误.',
+                "state"=>400
+            ]);
+            return;
+        }
+        //服务器验证
+        //新密码签名
+        $NewPass = md5(md5($session->get('admin_user')).md5($NewPassword).md5('!@#$%^&*()_+'));
+        if(!$model->where([
+                'user_id'=>$session->get('admin_user'),
+                'pass'=>md5(md5($session->get('admin_user')).md5($pass).md5('!@#$%^&*()_+')),
+                'distinguish'=>$session->get('state')
+        ])->update(['pass'=>$NewPass]))
+        {
+            echo json_encode([
+                "msg"=>'密码错误',
+                "state"=>400
+            ]);
+            return;
+        }
+        echo json_encode([
+            "msg"=>'密码修改成功请重新登录',
+            "state"=>200
+        ]);
+        return;
     }
 }

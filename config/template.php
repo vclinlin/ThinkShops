@@ -36,7 +36,7 @@ return [
     'tpl_replace_string'  =>  [
         '__STATIC__'=>'/static',
         '__JQ__' => '/static/jquery',
-        '__BOOT__'=>'/static/bootstrap4',
+        '__BOOT__'=>'/static/bootstrap4.0',
         '__CSS__'=>"static/style"
     ],
 ];

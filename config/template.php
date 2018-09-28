@@ -37,6 +37,6 @@ return [
         '__STATIC__'=>'/static',
         '__JQ__' => '/static/jquery',
         '__BOOT__'=>'/static/bootstrap4.0',
-        '__CSS__'=>"static/style"
+        '__CSS__'=>"/static/style"
     ],
 ];

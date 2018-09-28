@@ -1,0 +1,89 @@
+{extend name="bases" /}
+
+{block name="title"}主页{/block}
+
+{block name="static"}
+{/block}
+
+{block name="body"}
+    <ul class="breadcrumb small">
+        <li class="breadcrumb-item active">首页</li>
+        <li class="breadcrumb-item active">分类管理</li>
+        <li class="breadcrumb-item active">二级分类</li>
+    </ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between">
+        <div class="d-inline-flex justify-content-start">
+            <input type="text" class="input-group-sm" id="key" placeholder="空值展示所有">
+            <button onclick="GetKey()" class="ml-1 btn-sm btn-success btn"><i class="fa fa-search"></i></button>
+            <button class="ml-1 btn-sm btn-success btn" data-toggle="modal" data-target="#AddTo"><i class="fa fa-plus"></i></button>
+        </div>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="col-12 table-responsive mt-2">
+        <table class="table table-bordered table-nowrap text-center">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>父级分类</th>
+                <th>子类名</th>
+                <th>创建时间</th>
+                <th>创建者</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if count($data) == 0}
+            <tr>
+                <td colspan="6">还没有任何分类</td>
+            </tr>
+            {else}
+            {volist name="data" id="data" $key}
+            <tr>
+                <td>{$key+1}</td>
+                <td>{$data.book_class_name}</td>
+                <td>{$data.name}</td>
+                <td>{:date('Y-m-d h:i:s',$data.createtime)}</td>
+                <td>{$data.creator}</td>
+                <td>
+                    <div class="btn-group btn-group-sm">
+                        <button class="btn-sm btn btn-primary">编辑</button>
+                        <button class="btn-sm btn btn-danger">删除</button>
+                    </div>
+                </td>
+            </tr>
+            {/volist}
+            {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12 d-inline-flex justify-content-center">
+        {$page|raw}
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        $('#key').bind('keypress', function (event) {
+            if (event.keyCode == 13) {
+                GetKey();
+            }
+        })
+    })
+    function GetKey() {
+        var key = $('#key').val().trim();
+        if(key=="")
+        {
+            layer.msg('请输入有效查询值',{icon:0,time:2000},function () {
+                key='%';
+                window.location.href='/index/Category/addItemName?key='+key;
+                return;
+            });
+        }else {
+            window.location.href='/index/Category/addItemName?key='+key;
+            return;
+        }
+    }
+</script>
+{/block}

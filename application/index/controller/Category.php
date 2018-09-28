@@ -10,17 +10,28 @@ namespace app\index\controller;
 
 
 use app\index\model\Book_class;
+use app\index\model\Item_class;
 use think\Session;
 
 class Category extends Index
 {
-    public function FatherLevel()  //一级分类展示
+    public function FatherLevel($key=null)  //一级分类展示
     {
         $model = new Book_class();
-        $data = $model->paginate(15);
+        //默认操作
+        if($key == null) {
+            $data = $model->paginate(15);
+            $page = $data->render();
+            $this->assign('page', $page);
+            $this->assign('data', $data);
+            return $this->fetch();
+        }
+        //搜索
+        $data = $model->where('name','like','%'.htmlentities($key).'%')->
+            paginate(15);
         $page = $data->render();
         $this->assign('page', $page);
-        $this->assign('data',$data);
+        $this->assign('data', $data);
         return $this->fetch();
     }
 
@@ -59,6 +70,67 @@ class Category extends Index
         }
         echo json_encode([
             'msg'=>'添加成功',
+            'state'=>200
+        ]);
+        return;
+    }
+
+    public function addItemName($Id=0,$key = null)
+    {
+        $model = new Item_class();
+        //默认操作,或者参数不完整
+        if(($key==null && $Id==0) || ($key==null && $Id!=0))
+        {
+            $data = $model->paginate(15);
+            $page = $data->render();
+            $this->assign('page',$page);
+            $this->assign('data',$data);
+            return $this->fetch();
+        }
+        //查询操作
+        if($Id == 0 && $key != null)
+        {
+            $data = $model->where('book_class_name|name|creator',
+                'like','%'.htmlentities($key).'%')->paginate(15);
+            if(!$data)
+            {
+                $data = $model->where('createtime',
+                    'like','%'.time($key).'%')->paginate(15);
+                $this->assign('page',$data->render());
+                $this->assign('data',$data);
+            }
+            $this->assign('page',$data->render());
+            $this->assign('data',$data);
+            return $this->fetch();
+        }
+        //精确获取
+        if($Id != 0 && $key != null)
+        {
+            $data = $model->where([
+                'Id'=>$Id
+            ])->paginate(15);
+            $this->assign('page',$data->render());
+            $this->assign('data',$data);
+            return $this->fetch();
+        }
+        return $this->error('不能识别的操作');
+    }
+
+    public function delBookClass($Id)
+    {
+        $model = new Book_class();
+        $item_model = new Item_class();
+        if(!$model->where(['Id'=>$Id])->delete())
+        {
+            echo json_encode([
+                'msg'=>'删除失败,稍后再试',
+                'state'=>400
+            ]);
+            return;
+        }
+        $item_model->where(['book_class_id'=>$Id])->delete();
+        echo json_encode([
+            'msg'=>'已删除',
             'state'=>200
         ]);
         return;

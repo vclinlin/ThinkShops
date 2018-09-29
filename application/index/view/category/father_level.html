@@ -47,7 +47,7 @@
                     <div class="btn-group btn-group-sm">
                         <button class="btn-sm btn btn-success"
                                 onclick="x_admin_show('查看<span class=\'text-danger\'>{$data.name}</span>的子类',
-                                '{:url('index/Category/addItemName',['Id'=>$data.Id,'key'=>$data.createtime])}')">添加子类</button>
+                                '{:url('index/Category/addItemName',['Id'=>$data.Id,'key'=>$data.createtime,'get'=>1])}')">添加子类</button>
                         <button class="btn-sm btn btn-primary">编辑</button>
                         <button class="btn-sm btn btn-danger" onclick="delBookClass({$data.Id})">删除</button>
                     </div>

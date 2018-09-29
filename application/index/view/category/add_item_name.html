@@ -14,8 +14,10 @@
 <div class="container-fluid">
     <div class="col-12 d-inline-flex justify-content-between">
         <div class="d-inline-flex justify-content-start">
+            {if $is_search == 1}
             <input type="text" class="input-group-sm" id="key" placeholder="空值展示所有">
             <button onclick="GetKey()" class="ml-1 btn-sm btn-success btn"><i class="fa fa-search"></i></button>
+            {/if}
             <button class="ml-1 btn-sm btn-success btn" data-toggle="modal" data-target="#AddTo"><i class="fa fa-plus"></i></button>
         </div>
         <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>

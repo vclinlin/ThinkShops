@@ -7,7 +7,7 @@ use think\Session;
 
 class Index extends Controller
 {
-    protected $beforeActionList = [
+    public $beforeActionList = [
         'LandingDetection'=> ['except'=>'login,logins'],
         'SignIn'=>['only'=>'login'],
     ];
@@ -17,7 +17,7 @@ class Index extends Controller
         return $this->fetch();
     }
     //如果登陆过,不再开放登录接口
-    protected function SignIn(){
+    public function SignIn(){
 //        实例化model
         $model = new Admin_user();
         $session = new Session();

@@ -75,20 +75,22 @@ class Category extends Index
         return;
     }
 
-    public function addItemName($Id=0,$key = null)
+    public function addItemName($Id=0,$key = null,$get=0)
     {
         $model = new Item_class();
+        $book_model = new Book_class();
         //默认操作,或者参数不完整
-        if(($key==null && $Id==0) || ($key==null && $Id!=0))
+        if(($key==null && $Id==0 && $get == 0) || ($key==null && $Id!=0))
         {
             $data = $model->paginate(15);
             $page = $data->render();
             $this->assign('page',$page);
             $this->assign('data',$data);
+            $this->assign('is_search',['data'=>1]);
             return $this->fetch();
         }
         //查询操作
-        if($Id == 0 && $key != null)
+        if($Id == 0 && $key != null && $get == 0)
         {
             $data = $model->where('book_class_name|name|creator',
                 'like','%'.htmlentities($key).'%')->paginate(15);
@@ -101,16 +103,18 @@ class Category extends Index
             }
             $this->assign('page',$data->render());
             $this->assign('data',$data);
+            $this->assign('is_search',['data'=>1]);
             return $this->fetch();
         }
         //精确获取
-        if($Id != 0 && $key != null)
+        if($Id != 0 && $key != null  && $get == 1 && $book_model->get(['Id'=>$Id,'createtime'=>$key]))
         {
             $data = $model->where([
                 'Id'=>$Id
             ])->paginate(15);
             $this->assign('page',$data->render());
             $this->assign('data',$data);
+            $this->assign('is_search',['data'=>0]);
             return $this->fetch();
         }
         return $this->error('不能识别的操作');

@@ -63,7 +63,7 @@
     </div>
 </div>
 
-<div class="modal fade" id="AddTo">
+<div class="modal fade" data-keyboard=false data-backdrop="static" id="AddTo">
     <div class="modal-dialog modal-lg">
         <div class="modal-content">
             <!-- 模态框头部 -->
@@ -75,7 +75,7 @@
             <!-- 模态框主体 -->
             <div class="modal-body p-3">
                 <div class="form-group">
-                    <input type="text" id="ClassName" class="input-group" placeholder="输入分类名">
+                    <input type="text" id="ClassName" class="input-group form-control" placeholder="输入分类名">
                 </div>
                 <div class="form-group">
                     <input type="button" class="btn btn-success" onclick="AddTo()" value="确定"/>
@@ -147,33 +147,42 @@
         }
     }
     function delBookClass(id) {
-        $.ajax({
-            url:'{:url("index/Category/delBookClass")}',
-            type:'post',
-            dataType:'json',
-            data:{
-                'Id':id
-            },success:function (data) {
-                try{
-                    if(data.state == 200){
-                        layer.msg(data.msg,{icon:1,time:2000},function () {
-                            window.location.reload()
-                        });
+        layer.confirm('确定删除该分类及其所有子类？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            $.ajax({
+                url:'{:url("index/Category/delBookClass")}',
+                type:'post',
+                dataType:'json',
+                data:{
+                    'Id':id
+                },success:function (data) {
+                    try{
+                        if(data.state == 200){
+                            layer.msg(data.msg,{icon:1,time:2000},function () {
+                                window.location.reload()
+                            });
+                            return
+                        }
+                        if(data.state == 400){
+                            layer.msg(data.msg,{icon:0,time:2000});
+                            return
+                        }
+                    }catch (e) {
+                        layer.msg('网络错误,稍后再试',{icon:0,time:2000});
                         return
                     }
-                    if(data.state == 400){
-                        layer.msg(data.msg,{icon:0,time:2000});
-                        return
-                    }
-                }catch (e) {
-                    layer.msg('网络错误,稍后再试',{icon:0,time:2000});
-                    return
+                },error:function (data) {
+                    layer.msg('网络错误稍后再试',{icon:0,time:2000});
+                    return;
                 }
-            },error:function (data) {
-                layer.msg('网络错误稍后再试',{icon:0,time:2000});
-                return;
-            }
-        })
+            })
+        }, function(){
+            layer.msg('已取消', {
+                time: 2000, //2s后自动关闭
+            });
+            return false;
+        });
     }
 </script>
 {/block}

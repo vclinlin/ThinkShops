@@ -2,8 +2,10 @@ $(function () {
     $(".table-nowrap th").attr('nowrap','nowrap');
     $(".table-nowrap td").attr('nowrap','nowrap');
     //美化所有分页
+    $(".pager").attr('class','pagination');
     $(".pagination").find('span,a').attr('class','page-link');
     $(".pagination").find('li').attr('class','page-item');
+
 })
 //对立的弹出层
 function x_admin_show(title,url,w,h){

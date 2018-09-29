@@ -35,6 +35,7 @@
                 <th>父级分类</th>
                 <th>子类名</th>
                 <th>创建时间</th>
+                <th>更新时间</th>
                 <th>创建者</th>
                 <th>操作</th>
             </tr>
@@ -51,10 +52,13 @@
                 <td>{$data.book_class_name}</td>
                 <td>{$data.name}</td>
                 <td>{:date('Y-m-d h:i:s',$data.createtime)}</td>
-                <td>{$data.creator}</td>
+                <td>{:date('Y-m-d h:i:s',$data.update_time)}</td>
+                <td>{:widget('WidgetData/getAdminName',['user_id'=>$data.creator])}</td>
                 <td>
                     <div class="btn-group btn-group-sm">
-                        <button class="btn-sm btn btn-primary">编辑</button>
+                        <button class="btn-sm btn btn-primary"
+                                onclick="x_admin_show('编辑<span class=\'text-danger\'>{$data.name}</span>的信息',
+                                '{:url('index/Category/EditSub',['id'=>$data.Id])}')">编辑</button>
                         <button class="btn-sm btn btn-danger" onclick="delItem({$data.Id})">删除</button>
                     </div>
                 </td>

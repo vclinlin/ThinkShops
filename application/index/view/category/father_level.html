@@ -27,6 +27,7 @@
                 <th>序号</th>
                 <th>名称</th>
                 <th>创建时间</th>
+                <th>更新时间</th>
                 <th>创建者</th>
                 <th>操作</th>
             </tr>
@@ -42,13 +43,16 @@
                 <td>{$key+1}</td>
                 <td>{$data.name}</td>
                 <td>{:date('Y-m-d h:i:s',$data.createtime)}</td>
-                <td>{$data.creator}</td>
+                <td>{:date('Y-m-d h:i:s',$data.update_time)}</td>
+                <td>{:widget('WidgetData/getAdminName',['user_id'=>$data.creator])}</td>
                 <td>
                     <div class="btn-group btn-group-sm">
                         <button class="btn-sm btn btn-success"
                                 onclick="x_admin_show('查看<span class=\'text-danger\'>{$data.name}</span>的子类',
                                 '{:url('index/Category/addItemName',['Id'=>$data.Id,'key'=>$data.createtime,'get'=>1])}')">添加子类</button>
-                        <button class="btn-sm btn btn-primary">编辑</button>
+                        <button class="btn-sm btn btn-primary"
+                                onclick="x_admin_show('编辑<span class=\'text-danger\'>{$data.name}</span>的信息',
+                                '{:url('index/Category/EditMain',['id'=>$data.Id])}')">编辑</button>
                         <button class="btn-sm btn btn-danger" onclick="delBookClass({$data.Id})">删除</button>
                     </div>
                 </td>

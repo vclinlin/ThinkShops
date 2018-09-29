@@ -208,4 +208,106 @@ class Category extends Index
         ]);
         return;
     }
+    //一级分类信息修改
+    public function editMain($id)
+    {
+        $model = new Book_class();
+        $data = $model->get(['Id'=>$id]);
+        $this->assign('data',$data);
+        return $this->fetch();
+    }
+    public function editMains($Id,$name)
+    {
+        $model = new Book_class();
+        if(count($model->where([
+            ['Id','<>',$Id],
+            ['name','=',htmlentities($name)]
+        ])->select()) > 0)
+        {
+            echo json_encode([
+                'msg'=>'已存在这个分类',
+                'state'=>400
+            ]);
+            return;
+        }
+        if(!$model->where(['Id'=>$Id])->update([
+            'name'=>htmlentities($name)
+        ]))
+        {
+            echo json_encode([
+                'msg'=>'修改失败,稍后再试',
+                'state'=>400
+            ]);
+            return;
+        }
+        $model->where(['Id'=>$Id])->update(['update_time'=>time()]);
+        $model = new Item_class();
+        $model->where(['book_class_id'=>$Id])->update(['book_class_name'=>htmlentities($name)]);
+        echo json_encode([
+            'msg'=>'修改完成',
+            'state'=>200
+        ]);
+        return;
+    }
+    //二级分类信息修改
+    public function editSub($id)
+    {
+        $model = new Item_class();
+        $book_model = new Book_class();
+        $datas = $book_model->all();
+        $data = $model->get(['Id'=>$id]);
+        $this->assign('data',$data);
+        $this->assign('datas',$datas);
+        return $this->fetch();
+    }
+
+    public function editSubs($Id,$book_class_id,$name)
+    {
+        $model = new Item_class();
+        $book_model = new Book_class();
+        $rel=$book_model->get(['Id'=>$book_class_id]);
+        if(!$rel)
+        {
+            echo json_encode([
+                'msg'=>'修改失败,一级分类不存在',
+                'state'=>400
+            ]);
+            return;
+        }
+        if(count($model->where([
+                ['Id','<>',$Id],
+                ['book_class_id','=',$book_class_id],
+                ['name','=',htmlentities($name)]
+            ])->select()) > 0)
+        {
+            echo json_encode([
+                'msg'=>'已存在这个分类',
+                'state'=>400
+            ]);
+            return;
+        }
+        if(!$model->where([
+                'Id'=>$Id
+        ])->update([
+                'book_class_id'=>$rel['Id'],
+                'book_class_name'=>$rel['name'],
+                'name'=>htmlentities($name)
+            ])
+        )
+        {
+            echo json_encode([
+                'msg'=>'修改失败,仔细核对后再试',
+                'state'=>400
+            ]);
+            return;
+        }
+        $model->where([
+            'Id'=>$Id
+        ])->update(['update_time'=>time()]);
+        echo json_encode([
+            'msg'=>'修改完成',
+            'state'=>200
+        ]);
+        return;
+    }
 }

@@ -9,8 +9,8 @@
 {block name="body"}
 <ul class="breadcrumb small">
     <li class="breadcrumb-item active">首页</li>
-    <li class="breadcrumb-item active">页面管理</li>
-    <li class="breadcrumb-item active">轮播图库</li>
+    <li class="breadcrumb-item active">页面元素</li>
+    <li class="breadcrumb-item active">图库</li>
 </ul>
 <div class="container-fluid">
     <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
@@ -53,7 +53,10 @@
                         <i class="fa fa-photo"></i>
                     </button>
                 </td>
-                <td>{$data.name}</td>
+                <td>
+                    <input id="name{$key+1}" class="input-group-sm text-center" type="text"
+                           value="{$data.name}" onchange="editName('name{$key+1}',{$data.Id})">
+                </td>
                 <td>
                     <button class="ml-1 btn-sm btn-danger btn"
                     onclick="DelImage({$data.Id})">
@@ -230,6 +233,22 @@ function Clear() {
     },function () {
 
     });
+}
+function editName(id,Id) {
+    var IdName = '#'+id;
+    var name = $(IdName).val().trim()==""?"无":$(IdName).val().trim();
+    $.ajax({
+        url:'{:url("index/PageManagement/editName")}',
+        type:'post',
+        data:{
+            name,Id
+        },error:function () {
+            layer.msg('修改失败,稍后再试',function () {
+                window.location.reload();
+                return;
+            })
+        }
+    })
 }
 </script>
 {/block}

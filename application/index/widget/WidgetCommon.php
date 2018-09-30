@@ -9,11 +9,20 @@
 namespace app\index\widget;
 
 
-use think\Controller;
+use app\index\controller\Index;
+use app\index\model\Home_url;
 
-class WidgetCommon extends Controller
+class WidgetCommon extends Index
 {
-    public function meuNav(){
-        return $this->fetch('common/meunav');
+    public function setUrl()
+    {
+        $home = new Home_url();
+        if(!$home->get(['Id'=>1]))
+        {
+            echo url('index/PageManagement/setHomeUrl');
+            return;
+        }
+        echo $home->get(['Id'=>1])['url'];
+        return;
     }
 }

@@ -10,6 +10,7 @@ namespace app\index\controller;
 
 
 use app\index\model\Gallery;
+use app\index\model\Home_url;
 use think\Exception;
 use think\Session;
 
@@ -123,5 +124,44 @@ class PageManagement extends Index
             'msg'=>'清理完成'
         ]);
         return;
+    }
+
+    public function editName($name,$Id) //修改图库备注
+    {
+        $model = new Gallery();
+        try {
+            $model->where(['Id' => $Id])->update(['name' => htmlentities($name)]);
+                }catch (Exception $e) {
+            return $e->getMessage();
+        }
+        return;
+    }
+
+    public function setHomeUrl($url=null)
+    {
+        if($url==null) {
+            return $this->fetch();
+        }
+        $model = new Home_url();
+        if(!$model->where(['Id'=>1])->update(['url'=>htmlentities($url)]))
+        {
+            if(!$model->insert(['Id'=>1,'url'=>htmlentities($url)]))
+            {
+                echo json_encode([
+                    'state'=>400,
+                    'msg'=>'设置失败'
+                ]);
+                return;
+            }
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'设置完成'
+        ]);
+        return;
+    }
+    public function homePage()
+    {
+
     }
 }

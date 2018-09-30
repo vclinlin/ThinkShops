@@ -66,20 +66,20 @@
                 <li>
                     <a href="javascript:;">
                         <i class="iconfont">&#xe6b8;</i>
-                        <cite>页面管理</cite>
+                        <cite>页面元素</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
                     <ul class="sub-menu">
                         <li>
                             <a _href="{:url('index/PageManagement/Broadcast')}">
                                 <i class="iconfont">&#xe6a7;</i>
-                                <cite>轮播图</cite>
+                                <cite>图库</cite>
                             </a>
                         </li >
                         <li>
-                            <a _href="member-del.html">
+                            <a _href="{:url("index/PageManagement/homePage")}">
                                 <i class="iconfont">&#xe6a7;</i>
-                                <cite>商城名称与logo</cite>
+                                <cite>首页管理</cite>
                             </a>
                         </li>
                     </ul>
@@ -290,11 +290,11 @@
     <div class="page-content">
         <div class="layui-tab tab" lay-filter="xbs_tab" lay-allowclose="false">
             <ul class="layui-tab-title">
-                <li class="home"><i class="layui-icon">&#xe68e;</i>商城首页</li>
+                <li class="home"><i class="layui-icon">&#xe68e;</i>商城预览</li>
             </ul>
             <div class="layui-tab-content">
                 <div class="layui-tab-item layui-show">
-                    <iframe src='http://www.shops.com' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+                    <iframe src='{:widget('WidgetCommon/setUrl')}' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
                 </div>
             </div>
         </div>

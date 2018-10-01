@@ -10,6 +10,7 @@ namespace app\index\widget;
 
 
 use app\index\controller\Index;
+use app\index\model\Admin_url;
 use app\index\model\Home_url;
 
 class WidgetCommon extends Index
@@ -20,6 +21,12 @@ class WidgetCommon extends Index
         if(!$home->get(['Id'=>1]))
         {
             echo url('index/PageManagement/setHomeUrl');
+            return;
+        }
+        $admin = new Admin_url();
+        if(!$admin->get(['Id'=>1]))
+        {
+            echo url('index/PageManagement/setAdminUrl');
             return;
         }
         echo $home->get(['Id'=>1])['url'];

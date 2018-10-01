@@ -9,6 +9,7 @@
 namespace app\index\controller;
 
 
+use app\index\model\Admin_url;
 use app\index\model\Gallery;
 use app\index\model\Home_url;
 use think\Exception;
@@ -143,6 +144,29 @@ class PageManagement extends Index
             return $this->fetch();
         }
         $model = new Home_url();
+        if(!$model->where(['Id'=>1])->update(['url'=>htmlentities($url)]))
+        {
+            if(!$model->insert(['Id'=>1,'url'=>htmlentities($url)]))
+            {
+                echo json_encode([
+                    'state'=>400,
+                    'msg'=>'设置失败'
+                ]);
+                return;
+            }
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'设置完成'
+        ]);
+        return;
+    }
+    public function setAdminUrl($url=null)
+    {
+        if($url==null) {
+            return $this->fetch();
+        }
+        $model = new Admin_url();
         if(!$model->where(['Id'=>1])->update(['url'=>htmlentities($url)]))
         {
             if(!$model->insert(['Id'=>1,'url'=>htmlentities($url)]))

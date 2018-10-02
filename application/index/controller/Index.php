@@ -1,6 +1,7 @@
 <?php
 namespace app\index\controller;
 
+use app\index\model\Admin_url;
 use app\index\model\Admin_user;
 use think\Controller;
 use think\Session;
@@ -8,13 +9,31 @@ use think\Session;
 class Index extends Controller
 {
     public $beforeActionList = [
-        'LandingDetection'=> ['except'=>'login,logins'],
+        'LandingDetection'=> ['except'=>'login,logins,login_state'],
         'SignIn'=>['only'=>'login'],
     ];
     //登录界面
     public function login()
     {
         return $this->fetch();
+    }
+
+    public function login_state($user_id)
+    {
+        $model = new Admin_user();
+        if(!$model->get([
+            'user_id'=>$user_id,
+            'login_state'=>1
+        ])){
+            echo json_encode([
+                'state'=>200
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>400
+        ]);
+        return;
     }
     //如果登陆过,不再开放登录接口
     public function SignIn(){
@@ -50,7 +69,7 @@ class Index extends Controller
         if(!$model -> where([
             'user_id'=>$user_id,
             'pass'=>$pass
-        ])->update(['distinguish'=>$state,'login_time'=>time()]))
+        ])->update(['distinguish'=>$state,'login_time'=>time(),'login_state'=>1]))
         {
             echo json_encode([
                 'msg'=>'账号或密码码错误',
@@ -77,6 +96,10 @@ class Index extends Controller
     public function logOut()
     {
         $session = new Session();
+        $model = new Admin_user();
+        $model->where(['user_id'=>$session->get('admin_user')])->update(
+            ['login_state'=>0]
+        );
         $session->delete('admin_user');
         return $this->redirect('/');
     }

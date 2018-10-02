@@ -10,6 +10,7 @@ namespace app\index\controller;
 
 
 use app\index\model\Admin_url;
+use app\index\model\Broadcast_msg;
 use app\index\model\Gallery;
 use app\index\model\Home_url;
 use think\Exception;
@@ -186,6 +187,21 @@ class PageManagement extends Index
     }
     public function homePage()
     {
+        $BroadcastModel = new Broadcast_msg();
+        $BroadcastData = $BroadcastModel->all();
+        //轮播图列表
+        $this->assign('Broadcast',$BroadcastData);
+        return $this->fetch();
+    }
+    public function SelectBroadcast()
+    {
+        $galleryModel = new Gallery();
+        $data = $galleryModel->order('name','desc')->paginate(15);
+        $page = $data->render();
+        $this->assign('page',$page);
+        $this->assign('data',$data);
+        $this->assign('is_search',['data'=>1]);
+        return $this->fetch();
 
     }
 }

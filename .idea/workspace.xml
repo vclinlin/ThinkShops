@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93faaaf-8d9e-469a-a64f-b0b923e1cd87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/index/model/Broadcast_msg.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/page_management/home_page.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/Index.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/controller/PageManagement.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/PageManagement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/index/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/index/login.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/topthink/think-installer/" />
@@ -24,18 +19,18 @@
     <session id="-734128185">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="4430" />
+          <entry key="html" value="4436" />
           <entry key="js" value="13" />
           <entry key="php" value="3516" />
-          <entry key="txt" value="39" />
+          <entry key="txt" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="4430" />
+          <entry key="HTML" value="4436" />
           <entry key="JavaScript" value="13" />
           <entry key="PHP" value="3516" />
-          <entry key="PLAIN_TEXT" value="39" />
+          <entry key="PLAIN_TEXT" value="51" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -126,8 +121,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/application/index/view/index/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+            <state relative-caret-position="671">
+              <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -371,7 +366,7 @@
       <workItem from="1538316884271" duration="44000" />
       <workItem from="1538355089186" duration="4079000" />
       <workItem from="1538448113078" duration="1681000" />
-      <workItem from="1538452194701" duration="4784000" />
+      <workItem from="1538452194701" duration="4851000" />
     </task>
     <task id="LOCAL-00001" summary="完善分类管理">
       <created>1538189538175</created>
@@ -415,12 +410,12 @@
       <option name="project" value="LOCAL" />
       <updated>1538355474737</updated>
     </task>
-    <task id="LOCAL-00007" summary="新增添加图书分类功能">
-      <created>1538140939528</created>
+    <task id="LOCAL-00007" summary="优化异地登陆信息提示">
+      <created>1538461209020</created>
       <option name="number" value="00007" />
       <option name="presentableId" value="LOCAL-00007" />
       <option name="project" value="LOCAL" />
-      <updated>1538140939528</updated>
+      <updated>1538461209020</updated>
     </task>
     <task id="LOCAL-00008" summary="新增为一级分类添加子类功能">
       <created>1538148938666</created>
@@ -429,11 +424,11 @@
       <option name="project" value="LOCAL" />
       <updated>1538148938667</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40698000" />
+    <option name="totallyTimeSpent" value="40765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -494,7 +489,8 @@
     <MESSAGE value="完成所有分类管理功能" />
     <MESSAGE value="完成轮播图图库建设" />
     <MESSAGE value="前后台分离关系搭建" />
-    <option name="LAST_COMMIT_MESSAGE" value="前后台分离关系搭建" />
+    <MESSAGE value="优化异地登陆信息提示" />
+    <option name="LAST_COMMIT_MESSAGE" value="优化异地登陆信息提示" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/static/jquery/main.js">
@@ -656,8 +652,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/index/login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="68" column="39" selection-start-line="68" selection-start-column="39" selection-end-line="68" selection-end-column="39" />
+        <state relative-caret-position="671">
+          <caret line="69" column="23" selection-start-line="69" selection-start-column="23" selection-end-line="69" selection-end-column="23" />
         </state>
       </provider>
     </entry>

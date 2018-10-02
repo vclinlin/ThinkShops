@@ -67,6 +67,7 @@ $('#pass').bind('keypress',function (event) {
                 }
             }catch (e) {
                 layer.msg('网络错误,稍后再试');
+                return;
             }
         });
     }

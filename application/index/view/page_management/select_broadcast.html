@@ -101,7 +101,12 @@
         }
     }
     function Determine() {
-        var select_list = $('')
+        //获取所有已选择的复选框的值
+        var select_list = [];
+        $('input:checkbox[name="item_select"]:checked').each(function (i) {
+            select_list[i] = $(this).val();
+        });
+        //
     }
 </script>
 {/block}

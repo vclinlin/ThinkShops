@@ -193,15 +193,15 @@ class PageManagement extends Index
         $this->assign('Broadcast',$BroadcastData);
         return $this->fetch();
     }
-    public function SelectBroadcast()
+    public function SelectBroadcast($key=null)
     {
         $galleryModel = new Gallery();
-        $data = $galleryModel->order('name','desc')->paginate(15);
+        $data = $galleryModel->order('name','desc')
+            ->where('name','like','%'.$key.'%')
+            ->paginate(10,'false',['query' =>request()->param()]);
         $page = $data->render();
         $this->assign('page',$page);
         $this->assign('data',$data);
-        $this->assign('is_search',['data'=>1]);
         return $this->fetch();
-
     }
 }

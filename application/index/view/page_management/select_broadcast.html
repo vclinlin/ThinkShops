@@ -1,0 +1,107 @@
+{extend name="bases" /}
+
+{block name="title"}主页{/block}
+
+{block name="static"}
+{/block}
+
+{block name="body"}
+    <ul class="breadcrumb small">
+        <li class="breadcrumb-item active">首页</li>
+        <li class="breadcrumb-item active">页面元素</li>
+        <li class="breadcrumb-item active">首页管理</li>
+    </ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between">
+        <div class="d-inline-flex justify-content-start">
+            <input type="text" class="input-group-sm" id="key" placeholder="空值展示所有">
+            <button onclick="GetKey()" class="ml-1 btn-sm btn-success btn">
+                <i class="fa fa-search"></i>
+            </button>
+            <button onclick="Determine()" class="ml-1 btn-sm btn-success btn">
+                <i class="fa">确定</i>
+            </button>
+        </div>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="col-12 table-responsive mt-2">
+        <table id="DataList" class="table table-bordered table-nowrap text-center">
+            <thead>
+            <tr>
+                <th>
+                    <input type="checkbox" id="all_select" />
+                </th>
+                <th>上传时间</th>
+                <th>上传者</th>
+                <th>预览</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if count($data) == 0}
+            <tr>
+                <td colspan="6">还没有上传任何图片</td>
+            </tr>
+            {else}
+            {volist name="data" id="data" $key}
+            <tr>
+                <td>
+                    <input type="checkbox" name="item_select" value="{$data.Id}" />
+                </td>
+                <td>{:date('y-m-d h:i:s',$data.createtime)}</td>
+                <td>{$data.creator}</td>
+                <td>
+                    <button class="btn-success btn-sm btn" onclick="x_admin_show('预览图片','{$data.file_path}')">
+                        <i class="fa fa-photo"></i>
+                    </button>
+                </td>
+                <td>
+                    {$data.name}
+                </td>
+            </tr>
+            {/volist}
+            {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12 d-inline-flex justify-content-center">
+        {$page|raw}
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#key').bind('keypress', function (event) {
+            if (event.keyCode == 13) {
+                GetKey();
+            }
+        })
+        $("#all_select").click(function () {
+            if(this.checked)
+            {
+                //选中
+                $("#DataList :checkbox").prop("checked", true);
+            }else{
+                //取消
+                $("#DataList :checkbox").prop("checked", false);
+            }
+        });
+    })
+    function GetKey() {
+        var key = $('#key').val().trim();
+        if(key=="")
+        {
+            layer.msg('请输入有效查询值',{icon:0,time:2000},function () {
+                key='%';
+                window.location.href='{:url("index/PageManagement/SelectBroadcast")}?key='+key;
+                return;
+            });
+        }else {
+            window.location.href='{:url("index/PageManagement/SelectBroadcast")}?key='+key;
+            return;
+        }
+    }
+    function Determine() {
+        var select_list = $('')
+    }
+</script>
+{/block}

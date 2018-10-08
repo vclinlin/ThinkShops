@@ -46,7 +46,7 @@
         {volist name="data" id="data" $key}
             <tr>
                 <td>{$key+1}</td>
-                <td>{:date('y-m-d h:i:s',$data.createtime)}</td>
+                <td>{:date('Y-m-d h:i:s',$data.createtime)}</td>
                 <td>{$data.creator}</td>
                 <td>
                     <button class="btn-success btn-sm btn" onclick="x_admin_show('预览图片','{$data.file_path}')">

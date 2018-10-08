@@ -204,4 +204,54 @@ class PageManagement extends Index
         $this->assign('data',$data);
         return $this->fetch();
     }
+
+    public function selectedList()
+    {
+        $Broadcast = new Gallery();
+        $session = new Session();
+        $Admin_url = new Admin_url();
+        $Broadcast_msg = new Broadcast_msg();
+        $rel = $Admin_url->get(['Id'=>1]);
+        if(!$rel)
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'请先设置后台地址'
+            ]);
+            return;
+        }
+        $url = $rel['url'];
+        $list = $this->request->post();
+        try {
+            foreach ($list['data'] as $item) {
+                $rel = $Broadcast->get(['Id' => $item]);
+                if (!$rel) {
+                    continue;
+                }
+                if (!file_exists('.' . $rel['file_path'])) {
+                    continue;
+                }
+                $data = [
+                    'admin_user' => $session->get('admin_user'),
+                    'url' => $url . $rel['file_path'],
+                    'name' => $rel['name'],
+                    'create_time' => time()
+
+                ];
+                $Broadcast_msg->insert($data);
+            }
+            echo json_encode([
+                'state'=>200,
+                'msg'=>'设置成功'
+            ]);
+            return;
+        }catch (Exception $e){
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'网络异常,稍后再试'
+                ]);
+            return;
+        }
+
+    }
 }

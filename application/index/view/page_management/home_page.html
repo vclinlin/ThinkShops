@@ -29,12 +29,12 @@
     <table id="BroadcastTable" class="table table-bordered table-nowrap text-center">
         <thead>
         <tr>
+            <th>顺序</th>
             <th>修改者</th>
             <th>备注</th>
             <th>查看</th>
             <th>状态</th>
             <th>更新时间</th>
-            <th>顺序</th>
             <th>操作</th>
         </tr>
         </thead>
@@ -44,14 +44,27 @@
             <td colspan="7">还没有设置轮播图</td>
         </tr>
         {else}
-            {volist name="Broadcast" id="Broadcast"}
+            {volist name="Broadcast" id="Broadcast" $key}
                 <tr>
-                    <td>{$Broadcast.admin_user}</td>
-                    <td>{$Broadcast.name}</td>
-                    <td>{$Broadcast.url}</td>
+                    <td>
+                        {if $Broadcast.sort == 0}
+                        {:$key+1}
+                        {else}
+                        $Broadcast.sort
+                        {/if}
+                    </td>
+                    <td>{:widget('WidgetData/getAdminName',['user_id'=>$Broadcast.admin_user])}</td>
+                    <td>
+                        <input id="name{$key+1}" class="input-group-sm text-center" type="text"
+                               value="{$Broadcast.name}" onchange="editName('name{$key+1}',{$Broadcast.Id})">
+                    </td>
+                    <td>
+                        <button class="btn-success btn-sm btn" onclick="x_admin_show('预览图片','{$Broadcast.url}')">
+                            <i class="fa fa-photo"></i>
+                        </button>
+                    </td>
                     <td>{$Broadcast.state}</td>
-                    <td>{$Broadcast.create_time}</td>
-                    <td>{$Broadcast.sort}</td>
+                    <td>{:date('Y-m-d',$Broadcast.create_time)}</td>
                     <td><button class="ml-1 btn-sm btn-danger btn"
                                 onclick="DelImage()">
                         <i class="fa fa-trash"></i>

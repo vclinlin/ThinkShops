@@ -72,7 +72,7 @@
                     </td>
                     <td>{:date('Y-m-d',$Broadcast.create_time)}</td>
                     <td><button class="ml-1 btn-sm btn-danger btn"
-                                onclick="DelImage()">
+                                onclick="DelImage({$Broadcast.Id})">
                         <i class="fa fa-trash"></i>
                     </button></td>
                 </tr>
@@ -170,6 +170,44 @@
                 return;
             }
         })
+    }
+    function DelImage(id) {
+        layer.confirm('确定删除该记录？', {
+            btn: ['确定','取消'] //按钮
+        }, function(){
+            $.ajax({
+                url:'{:url("index/PageManagement/DelBroadcast")}',
+                type:'post',
+                dataType:'json',
+                data:{
+                    id
+                },success:function (data) {
+                    try{
+                        if(data.state == 200){
+                            layer.msg(data.msg,{icon:1,time:2000},function () {
+                                window.location.reload()
+                            });
+                            return
+                        }
+                        if(data.state == 400){
+                            layer.msg(data.msg,{icon:0,time:2000});
+                            return
+                        }
+                    }catch (e) {
+                        layer.msg('网络错误,稍后再试',{icon:0,time:2000});
+                        return
+                    }
+                },error:function (data) {
+                    layer.msg('网络错误稍后再试',{icon:0,time:2000});
+                    return;
+                }
+            })
+        }, function(){
+            layer.msg('已取消', {
+                time: 2000, //2s后自动关闭
+            });
+            return false;
+        });
     }
 </script>
 {/block}

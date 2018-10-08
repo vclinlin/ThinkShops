@@ -354,4 +354,31 @@ class PageManagement extends Index
         ]);
         return;
     }
+
+    public function DelBroadcast($id)
+    {
+        $model = new Broadcast_msg();
+        $data = $model->get(['Id'=>$id]);
+        if(!$data)
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'删除失败'
+            ]);
+            return;
+        }
+        if(!$model->where(["Id"=>$id])->delete())
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'记录删除失败'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'已删除'
+        ]);
+        return;
+    }
 }

@@ -188,7 +188,7 @@ class PageManagement extends Index
     public function homePage()
     {
         $BroadcastModel = new Broadcast_msg();
-        $BroadcastData = $BroadcastModel->all();
+        $BroadcastData = $BroadcastModel->order('sort','asc')->select();
         //轮播图列表
         $this->assign('Broadcast',$BroadcastData);
         return $this->fetch();
@@ -205,7 +205,7 @@ class PageManagement extends Index
         return $this->fetch();
     }
 
-    public function selectedList()
+    public function selectedList() //设置轮播图
     {
         $Broadcast = new Gallery();
         $session = new Session();
@@ -253,5 +253,35 @@ class PageManagement extends Index
             return;
         }
 
+    }
+    public function editListName($name,$Id) //修改轮播图备注
+    {
+        $model = new Broadcast_msg();
+        try {
+            $model->where(['Id' => $Id])->update(['name' => htmlentities($name)]);
+        }catch (Exception $e) {
+            return $e->getMessage();
+        }
+        return;
+    }
+    public function editSort($sort,$Id) //修改轮播图备注
+    {
+        $model = new Broadcast_msg();
+        $rel = $model->where([   //获取原顺序为$sort的数据
+            ['Id','<>',$Id],
+            ['sort','=',$sort]
+        ])->select();
+        $rels = $model->get(['Id'=>$Id]);
+        try {
+            if(count($rel)>0)
+            {
+                //交换顺序
+                $model->where(['Id' => $rel[0]['Id']])->update(['sort' => $rels['sort']]);
+            }
+            $model->where(['Id' => $Id])->update(['sort' => $sort]);
+        }catch (Exception $e) {
+            return $e->getMessage();
+        }
+        return;
     }
 }

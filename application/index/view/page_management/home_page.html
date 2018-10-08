@@ -33,7 +33,6 @@
             <th>修改者</th>
             <th>备注</th>
             <th>查看</th>
-            <th>状态</th>
             <th>更新时间</th>
             <th>操作</th>
         </tr>
@@ -41,16 +40,18 @@
         <tbody>
         {if count($Broadcast)==0}
         <tr>
-            <td colspan="7">还没有设置轮播图</td>
+            <td colspan="6">还没有设置轮播图</td>
         </tr>
         {else}
             {volist name="Broadcast" id="Broadcast" $key}
                 <tr>
                     <td>
-                        {if $Broadcast.sort == 0}
-                        {:$key+1}
+                        {if $Broadcast.sort == 999}
+                        <input id="sort{$key+1}" class="input-group-sm text-center" type="text"
+                               value="{$key+1}" onchange="editSort('sort{$key+1}',{$Broadcast.Id})">
                         {else}
-                        $Broadcast.sort
+                        <input id="sort{$key+1}" class="input-group-sm  text-center" type="text"
+                               value="{$Broadcast.sort}" onchange="editSort('sort{$key+1}',{$Broadcast.Id})">
                         {/if}
                     </td>
                     <td>{:widget('WidgetData/getAdminName',['user_id'=>$Broadcast.admin_user])}</td>
@@ -63,7 +64,6 @@
                             <i class="fa fa-photo"></i>
                         </button>
                     </td>
-                    <td>{$Broadcast.state}</td>
                     <td>{:date('Y-m-d',$Broadcast.create_time)}</td>
                     <td><button class="ml-1 btn-sm btn-danger btn"
                                 onclick="DelImage()">
@@ -90,6 +90,45 @@
             });
             return false;
         });
+    }
+    function editSort(id,Id) {
+        var IdName = '#'+id;
+        var sort = $(IdName).val().trim()==""?999:$(IdName).val().trim();
+        if(!/^[0-9]+$/.test(sort)||sort<=0)
+        {
+            layer.msg('请输入非零数字排序',{time: 2000},function () {
+                window.location.reload();
+            });
+            return;
+        }
+        $.ajax({
+            url:'{:url("index/PageManagement/editSort")}',
+            type:'post',
+            data:{
+                sort,Id
+            },error:function () {
+                layer.msg('修改失败,稍后再试',function () {
+                    window.location.reload();
+                    return;
+                })
+            }
+        })
+    }
+    function editName(id,Id) {
+        var IdName = '#'+id;
+        var name = $(IdName).val().trim()==""?"无":$(IdName).val().trim();
+        $.ajax({
+            url:'{:url("index/PageManagement/editListName")}',
+            type:'post',
+            data:{
+                name,Id
+            },error:function () {
+                layer.msg('修改失败,稍后再试',function () {
+                    window.location.reload();
+                    return;
+                })
+            }
+        })
     }
 </script>
 {/block}

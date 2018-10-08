@@ -47,7 +47,7 @@
             <tr>
                 <td>{$key+1}</td>
                 <td>{:date('Y-m-d h:i:s',$data.createtime)}</td>
-                <td>{$data.creator}</td>
+                <td>{:widget('WidgetData/getAdminName',['user_id'=>$data.creator])}</td>
                 <td>
                     <button class="btn-success btn-sm btn" onclick="x_admin_show('预览图片','{$data.file_path}')">
                         <i class="fa fa-photo"></i>

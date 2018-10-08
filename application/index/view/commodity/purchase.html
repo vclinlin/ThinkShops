@@ -1,0 +1,132 @@
+{extend name="bases" /}
+
+{block name="title"}商品列表{/block}
+
+{block name="static"}
+
+{/block}
+
+{block name="body"}
+<ul class="breadcrumb small">
+    <li class="breadcrumb-item active">首页</li>
+    <li class="breadcrumb-item active">商品管理</li>
+    <li class="breadcrumb-item active">商品列表</li>
+</ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
+        <div class="d-inline-flex justify-content-start">
+            <input type="text" class="input-group-sm" id="key" placeholder="空值展示所有">
+            <button onclick="GetKey()" class="ml-1 btn-sm btn-success btn"><i class="fa fa-search"></i></button>
+            <button class="ml-1 btn-sm btn-success btn" >
+                <i class="fa fa-plus"></i>
+            </button>
+        </div>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+</div>
+<div class="col-12 table-responsive mt-2">
+    <table class="table table-bordered table-nowrap text-center">
+        <thead>
+        <tr>
+            <th>序号</th>
+            <th>书名</th>
+            <th>封面</th>
+            <th>主类</th>
+            <th>子类</th>
+            <th>出版社</th>
+            <th>出版日期</th>
+            <th>上架日期</th>
+            <th>单价(<span class="text-danger">元</span>)</th>
+            <th>总数</th>
+            <th>销量</th>
+            <th>库存</th>
+        </tr>
+        </thead>
+        <tbody>
+        {if count($book) == 0}
+        <tr>
+            <td colspan="11">还没有上架任何图书</td>
+        </tr>
+        {else}
+        {volist name="book" id="book" $key}
+        <tr class="{if ($book.count-$book.sales) <= 10} table-danger{/if}">
+            <td>{$key+1}</td>
+            <td>{$book.bookname}</td>
+            <td>
+                <img src="{$book.cover}" class="img-thumbnail"
+                     style="max-width: 30px;max-height:40px;cursor:pointer;"
+                     data-toggle="modal" data-target="#myModal"
+                     onclick="setModalImg(this)">
+            </td>
+            <td>{$book.book_class_name}</td>
+            <td>{$book.name}</td>
+            <td>{$book.press}</td>
+            <td>{:date('Y-m-d',$book.r_time)}</td>
+            <td>{:date('Y-m-d',$book.s_time)}</td>
+            <td>{$book.price}</td>
+            <td>{$book.count}</td>
+            <td>{$book.sales}</td>
+            <td>{$book.count-$book.sales}</td>
+        </tr>
+        {/volist}
+        {/if}
+        </tbody>
+    </table>
+    <div class="col-12 d-inline-flex justify-content-center mt-2">
+        {$page|raw}
+    </div>
+</div>
+
+
+<!-- 附件 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <dl class="modal-title">查看封面</dl>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body mx-auto d-inline-flex justify-content-center">
+                <img id="myModalImg" class="img-thumbnail"
+                     style="max-width:180px;max-height:240px;cursor:pointer;">
+            </div>
+            <div class="modal-footer justify-content-center">
+                <button class="ml-1 btn-sm btn-primary btn" >
+                    上传新封面
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    $(function () {
+        $('#key').bind('keypress', function (event) {
+            if (event.keyCode == 13) {
+                GetKey();
+            }
+        })
+    })
+    function setModalImg(_this) {
+        $('#myModalImg').attr('src',_this.src);
+    }
+    function GetKey() {
+        var key = $('#key').val().trim();
+        if(key=="")
+        {
+            layer.msg('请输入有效查询值',{icon:0,time:2000},function () {
+                key='%';
+                window.location.href='/index/Commodity/Purchase?key='+key;
+                return;
+            });
+        }else {
+            window.location.href='/index/Commodity/Purchase?key='+key;
+            return;
+        }
+    }
+</script>
+{/block}

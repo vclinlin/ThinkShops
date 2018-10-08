@@ -13,6 +13,8 @@ use app\index\model\Admin_url;
 use app\index\model\Broadcast_msg;
 use app\index\model\Gallery;
 use app\index\model\Home_url;
+use app\index\model\Logo_img;
+use app\index\model\Logo_text;
 use think\Exception;
 use think\Session;
 
@@ -188,9 +190,11 @@ class PageManagement extends Index
     public function homePage()
     {
         $BroadcastModel = new Broadcast_msg();
+        $logo_text = new Logo_text();
         $BroadcastData = $BroadcastModel->order('sort','asc')->select();
         //轮播图列表
         $this->assign('Broadcast',$BroadcastData);
+        $this->assign('logo_text',$logo_text->get(['Id'=>1]));
         return $this->fetch();
     }
     public function SelectBroadcast($key=null)
@@ -282,6 +286,72 @@ class PageManagement extends Index
         }catch (Exception $e) {
             return $e->getMessage();
         }
+        return;
+    }
+
+    public function AddLogo($logo_text)
+    {
+        $model = new Logo_text();
+        if(!$model->where(['Id'=>1])->update(['logo'=>htmlentities($logo_text)]))
+        {
+            if(!$model->insert(['Id'=>1,'logo'=>htmlentities($logo_text)]))
+            {
+                echo json_encode([
+                    'state'=>400,
+                    'msg'=>'设置失败'
+                ]);
+                return;
+            }
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'设置完成'
+        ]);
+        return;
+    }
+
+    public function setLogo($key = null)
+    {
+        $galleryModel = new Gallery();
+        $data = $galleryModel->order('name','desc')
+            ->where('name','like','%'.$key.'%')
+            ->paginate(10,'false',['query' =>request()->param()]);
+        $page = $data->render();
+        $this->assign('page',$page);
+        $this->assign('data',$data);
+        return $this->fetch();
+    }
+
+    public function setLogos($Id)
+    {
+        $Admin_url = new Admin_url();
+        $rel = $Admin_url->get(['Id'=>1]);
+        $Gallery = new Gallery();
+        $rels = $Gallery->get(['Id'=>$Id]);
+        if(!$rel)
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'请先设置后台地址'
+            ]);
+            return;
+        }
+        $model = new Logo_img();
+        if(!$model->where(['Id'=>1])->update(['url'=>$rel['url'].$rels['file_path']]))
+        {
+            if(!$model->insert(['Id'=>1,'url'=>$rel['url'].$rels['file_path']]))
+            {
+                echo json_encode([
+                    'state'=>400,
+                    'msg'=>'设置失败'
+                ]);
+                return;
+            }
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'设置完成'
+        ]);
         return;
     }
 }

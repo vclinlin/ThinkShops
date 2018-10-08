@@ -1,0 +1,138 @@
+{extend name="bases" /}
+
+{block name="title"}主页{/block}
+
+{block name="static"}
+{/block}
+
+{block name="body"}
+    <ul class="breadcrumb small">
+        <li class="breadcrumb-item active">首页</li>
+        <li class="breadcrumb-item active">页面元素</li>
+        <li class="breadcrumb-item active">首页管理</li>
+    </ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between">
+        <div class="d-inline-flex justify-content-start">
+            <input type="text" class="input-group-sm" id="key" placeholder="空值展示所有">
+            <button onclick="GetKey()" class="ml-1 btn-sm btn-success btn">
+                <i class="fa fa-search"></i>
+            </button>
+            <button onclick="Determine()" class="ml-1 btn-sm btn-success btn">
+                <i class="fa">确定</i>
+            </button>
+        </div>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="col-12 table-responsive mt-2">
+        <div class="d-inline-flex">
+            <label for="DataList">请选择 <span class="text-danger">(290 X 60)</span>的logo图:&nbsp;</label>
+        </div>
+        <table id="DataList" class="table table-bordered table-nowrap text-center">
+            <thead>
+            <tr>
+                <th>
+                    选择
+                </th>
+                <th>上传时间</th>
+                <th>上传者</th>
+                <th>预览</th>
+                <th>备注</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if count($data) == 0}
+            <tr>
+                <td colspan="6">还没有上传任何图片</td>
+            </tr>
+            {else}
+            {volist name="data" id="data" $key}
+            <tr>
+                <td>
+                    <input type="radio" name="item_select" value="{$data.Id}" />
+                </td>
+                <td>{:date('y-m-d h:i:s',$data.createtime)}</td>
+                <td>{:widget('WidgetData/getAdminName',['user_id'=>$data.creator])}</td>
+                <td>
+                    <button class="btn-success btn-sm btn" onclick="x_admin_show('预览图片','{$data.file_path}')">
+                        <i class="fa fa-photo"></i>
+                    </button>
+                </td>
+                <td>
+                    {$data.name}
+                </td>
+            </tr>
+            {/volist}
+            {/if}
+            </tbody>
+        </table>
+    </div>
+    <div class="col-12 d-inline-flex justify-content-center">
+        {$page|raw}
+    </div>
+</div>
+<script>
+    $(function () {
+        $('#key').bind('keypress', function (event) {
+            if (event.keyCode == 13) {
+                GetKey();
+            }
+        })
+    })
+    function GetKey() {
+        var key = $('#key').val().trim();
+        if(key=="")
+        {
+            layer.msg('请输入有效查询值',{icon:0,time:2000},function () {
+                key='%';
+                window.location.href='{:url("index/PageManagement/setLogo")}?key='+key;
+                return;
+            });
+        }else {
+            window.location.href='{:url("index/PageManagement/setLogo")}?key='+key;
+            return;
+        }
+    }
+    function Determine() {
+        //获取所有已选择的值
+        var Id = $('input:radio:checked').val();
+        //验证并发送选择项
+        if(!Id>0)
+        {
+            layer.msg('选择一张图片作为logo图',{icon: 0,time: 2000});
+            return;
+        }
+        $.ajax({
+            url:'{:url("index/PageManagement/setLogos")}',
+            type: "POST",
+            dataType:'json',
+            data:{
+                Id
+            },
+            success:function (data) {
+                try{
+                    if(data.state==200)
+                    {
+                        layer.msg(data.msg,
+                            {icon:1,time:3000},function () {
+                            window.location.reload();
+                                return;
+                            });
+                    }
+                    if(data.state==400)
+                    {
+                        layer.msg(data.msg,{icon:0,time:2000});
+                        return;
+                    }
+                }catch (e) {
+                    layer.msg('网络异常,稍后再试',{icon:0,time:2000});
+                    return;
+                }
+            },error:function (data) {
+                layer.msg('网络异常,稍后再试',{icon:0,time:2000});
+                return;
+            }
+        })
+    }
+</script>
+{/block}

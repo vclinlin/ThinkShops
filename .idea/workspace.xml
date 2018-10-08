@@ -2,10 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93faaaf-8d9e-469a-a64f-b0b923e1cd87" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/index/model/Logo_img.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/model/Logo_text.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/page_management/set_logo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/PageManagement.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/PageManagement.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/page_management/broadcast.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/page_management/broadcast.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/page_management/home_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/page_management/home_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/index/view/page_management/select_broadcast.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/page_management/select_broadcast.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/vendor/composer/" />
     <ignored path="$PROJECT_DIR$/vendor/topthink/think-installer/" />
@@ -22,41 +24,42 @@
     <session id="-734128185">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="5201" />
+          <entry key="html" value="5589" />
           <entry key="js" value="13" />
-          <entry key="php" value="4476" />
-          <entry key="txt" value="80" />
+          <entry key="php" value="4715" />
+          <entry key="txt" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="5201" />
+          <entry key="HTML" value="5589" />
           <entry key="JavaScript" value="13" />
-          <entry key="PHP" value="4476" />
-          <entry key="PLAIN_TEXT" value="80" />
+          <entry key="PHP" value="4715" />
+          <entry key="PLAIN_TEXT" value="84" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="htaccess" value="1" />
-          <entry key="html" value="34" />
+          <entry key="html" value="37" />
           <entry key="jpg" value="2" />
           <entry key="js" value="1" />
-          <entry key="php" value="18" />
+          <entry key="php" value="21" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="HTML" value="34" />
+          <entry key="HTML" value="37" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="1" />
-          <entry key="PHP" value="18" />
+          <entry key="PHP" value="21" />
           <entry key="htaccess" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.php.new.class">
         <counts>
-          <entry key="PHP Class.type" value="6" />
+          <entry key="PHP Class.type" value="8" />
+          <entry key="PHP Trait.type" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
@@ -79,8 +82,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/PageManagement.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="267" column="5" lean-forward="true" selection-start-line="267" selection-start-column="5" selection-end-line="267" selection-end-column="5" />
+            <state relative-caret-position="543">
+              <caret line="341" column="64" lean-forward="true" selection-start-line="341" selection-start-column="64" selection-end-line="341" selection-end-column="64" />
               <folding>
                 <element signature="e#122#152#0#PHP" expanded="true" />
               </folding>
@@ -88,56 +91,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/controller/Category.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="231" column="9" lean-forward="true" selection-start-line="221" selection-start-column="8" selection-end-line="231" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/page_management/home_page.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="309">
-              <caret line="100" column="15" lean-forward="true" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/page_management/select_broadcast.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="910">
-              <caret line="134" column="31" lean-forward="true" selection-start-line="134" selection-start-column="31" selection-end-line="134" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/page_management/broadcast.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="659">
-              <caret line="251" column="1" lean-forward="true" selection-start-line="236" selection-end-line="251" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/category/father_level.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="46" column="83" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="83" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+        <entry file="file://$PROJECT_DIR$/application/index/view/page_management/set_logo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="399">
-              <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+            <state relative-caret-position="572">
+              <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -181,9 +139,12 @@
         <option value="$PROJECT_DIR$/application/index/controller/Category.php" />
         <option value="$PROJECT_DIR$/application/index/view/page_management/select_broadcast.html" />
         <option value="$PROJECT_DIR$/application/index/view/page_management/broadcast.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/PageManagement.php" />
-        <option value="$PROJECT_DIR$/application/index/view/page_management/home_page.html" />
         <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
+        <option value="$PROJECT_DIR$/application/index/model/Logo_text.php" />
+        <option value="$PROJECT_DIR$/application/index/view/page_management/home_page.html" />
+        <option value="$PROJECT_DIR$/application/index/model/Logo_img.php" />
+        <option value="$PROJECT_DIR$/application/index/controller/PageManagement.php" />
+        <option value="$PROJECT_DIR$/application/index/view/page_management/set_logo.html" />
       </list>
     </option>
   </component>
@@ -355,7 +316,7 @@
       <workItem from="1538452194701" duration="6212000" />
       <workItem from="1538512622358" duration="2278000" />
       <workItem from="1538575079948" duration="1639000" />
-      <workItem from="1538958353247" duration="5718000" />
+      <workItem from="1538958353247" duration="9069000" />
     </task>
     <task id="LOCAL-00001" summary="完善分类管理">
       <created>1538189538175</created>
@@ -434,11 +395,18 @@
       <option name="project" value="LOCAL" />
       <updated>1538961150972</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="完善轮播图信息管理">
+      <created>1538964111194</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1538964111194</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51761000" />
+    <option name="totallyTimeSpent" value="55112000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -502,7 +470,8 @@
     <MESSAGE value="优化异地登陆信息提示" />
     <MESSAGE value="选择轮播图界面完善" />
     <MESSAGE value="完善轮播图选择" />
-    <option name="LAST_COMMIT_MESSAGE" value="完善轮播图选择" />
+    <MESSAGE value="完善轮播图信息管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="完善轮播图信息管理" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/public/static/jquery/main.js">
@@ -611,13 +580,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/category/father_level.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="46" column="83" lean-forward="true" selection-start-line="46" selection-start-column="20" selection-end-line="46" selection-end-column="83" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/page_management/select_broadcast.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="910">
@@ -646,10 +608,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="477">
+          <caret line="84" column="25" lean-forward="true" selection-start-line="84" selection-start-column="25" selection-end-line="84" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Logo_text.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/category/father_level.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2311">
+          <caret line="127" column="21" lean-forward="true" selection-start-line="127" selection-start-column="21" selection-end-line="127" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/model/Logo_img.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="13" column="28" selection-start-line="13" selection-start-column="28" selection-end-line="13" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/controller/PageManagement.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="267" column="5" lean-forward="true" selection-start-line="267" selection-start-column="5" selection-end-line="267" selection-end-column="5" />
+        <state relative-caret-position="543">
+          <caret line="341" column="64" lean-forward="true" selection-start-line="341" selection-start-column="64" selection-end-line="341" selection-end-column="64" />
           <folding>
             <element signature="e#122#152#0#PHP" expanded="true" />
           </folding>
@@ -658,15 +648,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/page_management/home_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="100" column="15" lean-forward="true" selection-start-line="100" selection-start-column="15" selection-end-line="100" selection-end-column="15" />
+        <state relative-caret-position="468">
+          <caret line="31" column="4" lean-forward="true" selection-start-line="31" selection-start-column="4" selection-end-line="33" selection-end-column="10" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/page_management/set_logo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="81" column="42" selection-start-line="81" selection-start-column="42" selection-end-line="81" selection-end-column="42" />
+        <state relative-caret-position="572">
+          <caret line="28" column="62" selection-start-line="28" selection-start-column="62" selection-end-line="28" selection-end-column="62" />
         </state>
       </provider>
     </entry>

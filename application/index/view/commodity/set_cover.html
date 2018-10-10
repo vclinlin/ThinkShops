@@ -26,7 +26,6 @@
         <thead>
         <tr>
             <th>书名</th>
-            <th>封面</th>
             <th>主类</th>
             <th>子类</th>
             <th>出版社</th>
@@ -41,10 +40,6 @@
         <tbody>
             <tr>
                 <td>{$book.bookname}</td>
-                <td>
-                    <img src="{$book.cover}" class="img-thumbnail"
-                         style="max-width: 30px;max-height:40px;cursor:pointer;">
-                </td>
                 <td>{$book.book_class_name}</td>
                 <td>{$book.name}</td>
                 <td>{$book.press}</td>
@@ -58,4 +53,171 @@
         </tbody>
     </table>
 </div>
+<div class="col-12 mt-2">
+    <form id="FormA">
+        <div class="form-group">
+            <label for="book_name">书籍名:</label>
+            <input id="book_name" class="form-control" type="text"
+                   value="{$book.bookname}">
+        </div>
+        <div class="form-group">
+            <label for="book_class">主分类:</label>
+            <select id="book_class" class="form-control">
+                <option id="main_item" value="{$book.book_class_id}">{$book.book_class_name}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="item_class">子分类:</label>
+            <select id="item_class" class="form-control"  >
+                <option id="item_class_main" value="{$book.item_class_id}">{$book.name}</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="press">出版社:</label>
+            <input id="press" type="text" class="form-control"
+            value="{$book.press}">
+        </div>
+        <div class="form-group">
+            <label for="r_time">出版日期:</label>
+            <input id="r_time" type="date" class="form-control"
+            value="{:date('Y-m-d',$book.r_time)}">
+        </div>
+        <div class="form-group">
+            <label for="price">单价(元):</label>
+            <input id="price" type="number" class="form-control"
+            value="{$book.price}">
+        </div>
+        <div class="form-group">
+            <label for="count">数量:</label>
+            <input id="count" type="number" class="form-control"
+                   value="{$book.count}">
+        </div>
+    </form>
+    <div class="form-group pt-2">
+        <button class="btn btn-success" onclick="modify()">确定</button>
+    </div>
+    <form>
+        <div class="form-group border-top mt-3">
+            <label for="set_cover">修改封面:(<span class="text-danger">最佳尺寸:高240px,长:180px;</span>)</label>
+            <div id="set_cover" style="height:240px;width:180px;overflow: hidden;">
+                <img src="{$book.cover}" style="width:100%;height:auto;overflow: hidden;">
+            </div>
+            <input type="file" class="form-control mt-2">
+        </div>
+    </form>
+    <div class="form-group pt-2">
+        <button class="form-control-sm btn btn-primary">确定</button>
+    </div>
+</div>
+<script>
+    $(function () {
+        getBookClass();
+        $("#book_class").change(function () {
+            getItemClass($("#book_class option:selected").val());
+        });
+    });
+    function getBookClass() {
+        $.ajax({
+            url:'{:url("index/Commodity/getBookClass")}',
+            type:'get',
+            dataType:'json',
+            success:function (data) {
+                $.each(data,function () {
+                    $("#main_item").after(
+                        '<option value="'+this.Id+'">'+this.name+'</option>'
+                    );
+                })
+            },error:function () {
+                layer.msg('主分类加载失败');
+                return;
+            }
+        })
+    }
+    function getItemClass(id) {
+        $.ajax({
+            url:'{:url("index/Commodity/getItemClass")}?id='+id,
+            type:'get',
+            dataType:'json',
+            success:function (data) {
+                $('option').remove('.item_class_sub');
+                if(data.length == 0)
+                {
+                    layer.msg('没有可用子分类');
+                    resetBookClass();
+                    return;
+                }
+                $.each(data,function () {
+                    $("#item_class").append(
+                        '<option class="item_class_sub" value="'+this.Id+'">'+this.name+'</option>'
+                    );
+                })
+                $('option').remove('#item_class_main');
+            },error:function () {
+                layer.msg('没有可用子分类');
+                resetBookClass();
+                return;
+            }
+        })
+    }
+    function resetBookClass() {
+        $("#book_class").find('option').eq(0).prop("selected",true);
+        getItemClass($("#book_class").find('option').val());
+    }
+    function modify() {
+        var item_class_id = $("#item_class").val();   //所属子类
+        var bookname = $("#book_name").val().trim();  //书名
+        var price = $("#price").val().trim();         //单价
+        var press = $("#press").val().trim();         //出版社
+        var r_time = $("#r_time").val().trim();       //出版时间
+        var count = $("#count").val();         //总数
+        var data = {}
+        if(bookname != "")
+        {
+            data['bookname'] = bookname;
+        }
+        if(/^[0-9]+(.[0-9]{1,2})?$/.test(price))
+        {
+            data['price'] = price;
+        }
+        if(press != "")
+        {
+            data['press'] = press;
+        }
+        if(/^[0-9]+[\\/\-.](0[1-9]|1[0-2])[\\/\-.](0[1-9]|[1-2][0-9]|3[0-1])$/.test(r_time))
+        {
+            data['r_time'] = r_time;
+        }
+        if(/^[0-9]+$/.test(count))
+        {
+            data['count'] = count;
+        }
+        data['item_class_id']=item_class_id;
+        $.ajax({
+            url:'{:url("index/Commodity/editCommodity",["Id"=>$book.Id])}',
+            type:'post',
+            dataType:'json',
+            data:data,
+            success:function (data) {
+                console.log(data);
+                try{
+                    if(data.state == 200){
+                        layer.msg(data.msg,{icon:1,time:2000},function () {
+                        });
+                        return
+                    }
+                    if(data.state == 400){
+                        layer.msg(data.msg,{icon:0,time:2000});
+                        return
+                    }
+                }catch (e) {
+                    layer.msg('网络错误,稍后再试',{icon:0,time:2000});
+                    return
+                }
+            },error:function (data) {
+                layer.msg('网络错误稍后再试',{icon:0,time:2000});
+                return;
+            }
+        })
+    }
+</script>
 {/block}

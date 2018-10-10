@@ -123,4 +123,36 @@ class Commodity extends Index
         ]);
         return;
     }
+
+    public function uploadCover($Id)
+    {
+        $files = $this->request->file('file');
+        $info = $files[0]
+            ->validate([
+                'ext' => 'bmp,jpg,png,tif,gif,pcx,tga,exif,fpx,svg,
+                psd,cdr,pcd,dxf,ufo,eps,ai,raw,WMF,webp'])
+            ->move('./cover/', time() . rand(rand(1, 1000), rand(1000, 100000)));
+        if(!$info)
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg' => '上传失败'
+            ]);
+            return;
+        }
+        $model = new Books();
+        if(!$model->where(['Id'=>$Id])->update(['cover'=>'/cover/' . $info->getSaveName()]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg' => '上传失败'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg' => '上传完成'
+        ]);
+        return;
+    }
 }

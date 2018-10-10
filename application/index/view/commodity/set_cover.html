@@ -53,60 +53,70 @@
         </tbody>
     </table>
 </div>
-<div class="col-12 mt-2">
-    <form id="FormA">
-        <div class="form-group">
-            <label for="book_name">书籍名:</label>
-            <input id="book_name" class="form-control" type="text"
-                   value="{$book.bookname}">
-        </div>
-        <div class="form-group">
-            <label for="book_class">主分类:</label>
-            <select id="book_class" class="form-control">
-                <option id="main_item" value="{$book.book_class_id}">{$book.book_class_name}</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="item_class">子分类:</label>
-            <select id="item_class" class="form-control"  >
-                <option id="item_class_main" value="{$book.item_class_id}">{$book.name}</option>
-            </select>
-        </div>
-        <div class="form-group">
-            <label for="press">出版社:</label>
-            <input id="press" type="text" class="form-control"
-            value="{$book.press}">
-        </div>
-        <div class="form-group">
-            <label for="r_time">出版日期:</label>
-            <input id="r_time" type="date" class="form-control"
-            value="{:date('Y-m-d',$book.r_time)}">
-        </div>
-        <div class="form-group">
-            <label for="price">单价(元):</label>
-            <input id="price" type="number" class="form-control"
-            value="{$book.price}">
-        </div>
-        <div class="form-group">
-            <label for="count">数量:</label>
-            <input id="count" type="number" class="form-control"
-                   value="{$book.count}">
-        </div>
-    </form>
-    <div class="form-group pt-2">
-        <button class="btn btn-success" onclick="modify()">确定</button>
-    </div>
-    <form>
-        <div class="form-group border-top mt-3">
-            <label for="set_cover">修改封面:(<span class="text-danger">最佳尺寸:高240px,长:180px;</span>)</label>
-            <div id="set_cover" style="height:240px;width:180px;overflow: hidden;" class="border">
-                <img src="{$book.cover}" id="preview" style="width:100%;height:auto;overflow: hidden;">
+<div class="row">
+    <div class="col-sm-7 bg-light">
+        <div class="ml-sm-2">
+            <form id="FormA">
+                <div class="form-group">
+                    <label for="book_name">书籍名:</label>
+                    <input id="book_name" class="form-control" type="text"
+                           value="{$book.bookname}">
+                </div>
+                <div class="form-group">
+                    <label for="book_class">主分类:</label>
+                    <select id="book_class" class="form-control">
+                        <option id="main_item" value="{$book.book_class_id}">{$book.book_class_name}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="item_class">子分类:</label>
+                    <select id="item_class" class="form-control"  >
+                        <option id="item_class_main" value="{$book.item_class_id}">{$book.name}</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="press">出版社:</label>
+                    <input id="press" type="text" class="form-control"
+                           value="{$book.press}">
+                </div>
+                <div class="form-group">
+                    <label for="r_time">出版日期:</label>
+                    <input id="r_time" type="date" class="form-control"
+                           value="{:date('Y-m-d',$book.r_time)}">
+                </div>
+                <div class="form-group">
+                    <label for="price">单价(元):</label>
+                    <input id="price" type="number" class="form-control"
+                           value="{$book.price}">
+                </div>
+                <div class="form-group">
+                    <label for="count">数量:</label>
+                    <input id="count" type="number" class="form-control"
+                           value="{$book.count}">
+                </div>
+            </form>
+            <div class="form-group pt-2">
+                <button class="btn btn-success" onclick="modify()">确定</button>
             </div>
-            <input type="file" id="FileImg" onchange="setSrc()" class="form-control mt-2">
         </div>
-    </form>
-    <div class="form-group pt-2">
-        <button class="form-control-sm btn btn-primary" onclick="uploadCover()">确定</button>
+    </div>
+    <div class="col-sm-5 bg-light">
+        <div class="ml-sm-2 mr-sm-2">
+            <form>
+                <div class="form-group">
+                    <label for="set_cover">修改封面:(<span class="text-danger">最佳尺寸:高240px,长:180px;</span>)</label>
+                    <div id="set_cover" style="height:240px;width:180px;overflow: hidden;" class="border">
+                        <img src="{$book.cover}" id="preview" style="width:100%;height:auto;overflow: hidden;">
+                    </div>
+                </div>
+            </form>
+            <div class="input-group pt-2">
+                <input type="file" accept="image/*" id="FileImg" onchange="setSrc()" class="form-control" placeholder="Some text">
+                <div class="input-group-prepend">
+                    <button class="btn btn-outline-primary" onclick="uploadCover()" type="button">确定</button>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
 <script>
@@ -236,6 +246,11 @@
     }
     function uploadCover() {
         var file = $("#FileImg")[0].files;
+        if($("#FileImg").val() == "")
+        {
+            layer.msg('请选择封面图');
+            return;
+        }
         var fileAry = new FormData();
         for(var i =0;i<file.length;i++)
         {

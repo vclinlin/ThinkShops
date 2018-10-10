@@ -1,0 +1,16 @@
+{extend name="bases" /}
+
+{block name="title"}发生错误{/block}
+
+{block name="static"}
+
+{/block}
+
+{block name="body"}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="text-danger">{$msg.msg}</h1>
+        <p>临时-错误页</p>
+    </div>
+</div>
+{/block}

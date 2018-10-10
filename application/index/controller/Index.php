@@ -184,4 +184,9 @@ class Index extends Controller
         ]);
         return;
     }
+    public function ErrorPage($msg=null)
+    {
+        $this->assign('msg',['msg'=>$msg]);
+        return $this->fetch();
+    }
 }

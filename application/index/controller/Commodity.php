@@ -20,6 +20,7 @@ class Commodity extends Index
         {
             $data = $book->alias('A')
                 ->join('item_class B','A.item_class_id = B.Id','LEFT')
+                ->field('A.*,B.book_class_name,B.name')
                 ->order('sales','desc')
                 ->paginate(15,'false',['query' =>request()->param()]);
             $this->assign('book',$data);
@@ -27,12 +28,25 @@ class Commodity extends Index
         }else{
             $data = $book->alias('A')
                 ->join('item_class B','A.item_class_id = B.Id','LEFT')
-                ->where('A.bookname|B.name|B.book_class_name|A.press','like','%'.htmlentities($key).'%')
+                ->where('A.bookname|B.name|B.book_class_name|A.press',
+                    'like','%'.htmlentities($key).'%')
+                ->field('A.*,B.book_class_name,B.name')
                 ->order('sales','desc')
                 ->paginate(15,'false',['query' =>request()->param()]);
             $this->assign('book',$data);
             $this->assign('page',$data->render());
         }
         return $this->fetch();
+    }
+
+    public function setCover($Id)
+    {
+        $model = new Books();
+        if(!$data = $model->get($Id))
+        {
+            $this->redirect(url('index/index/ErrorPage',['msg'=>'书籍信息错误']));
+            return;
+        }
+
     }
 }

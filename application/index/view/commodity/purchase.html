@@ -40,6 +40,7 @@
             <th>总数</th>
             <th>销量</th>
             <th>库存</th>
+            <th>操作</th>
         </tr>
         </thead>
         <tbody>
@@ -67,6 +68,13 @@
             <td>{$book.count}</td>
             <td>{$book.sales}</td>
             <td>{$book.count-$book.sales}</td>
+            <td>
+                <div class="btn-group btn-group-sm">
+                    <button type="button" class="btn btn-primary"
+                    onclick='x_admin_show("编辑商品信息","{:url(\"index/Commodity/setCover\",[\"Id\"=>$book.Id])}")'>编辑</button>
+                    <button type="button" class="btn btn-danger">删除</button>
+                </div>
+            </td>
         </tr>
         {/volist}
         {/if}
@@ -94,8 +102,8 @@
                      style="max-width:180px;max-height:240px;cursor:pointer;">
             </div>
             <div class="modal-footer justify-content-center">
-                <input data-val="0" id="check" class="ml-1 btn-sm btn-primary btn" value="上传新封面"
-                onclick="setCover()" >
+                <input data-val="0" id="check" class="ml-1 btn-sm btn-primary btn"
+                       value="编辑" onclick="setCover()" >
             </div>
         </div>
     </div>
@@ -129,7 +137,7 @@
         }
     }
     function setCover() {
-        x_admin_show('上传书籍封面','{:url("index/Commodity/setCover")}?Id='+$('#check').data('val'));
+        x_admin_show('编辑商品信息','{:url("index/Commodity/setCover")}?Id='+$('#check').data('val'));
         $("#myModal").modal('hide');
     }
 </script>

@@ -41,12 +41,19 @@ class Commodity extends Index
 
     public function setCover($Id)
     {
-        $model = new Books();
-        if(!$data = $model->get($Id))
+        $book = new Books();
+        $data = $book->alias('A')
+            ->join('item_class B','A.item_class_id = B.Id','LEFT')
+            ->where(['A.Id'=>$Id])
+            ->field('A.*,B.book_class_name,B.name')
+            ->order('sales','desc')->find();
+        //不存在的商品
+        if(!$data)
         {
             $this->redirect(url('index/index/ErrorPage',['msg'=>'书籍信息错误']));
             return;
         }
-
+        $this->assign('book',$data);
+        return $this->fetch();
     }
 }

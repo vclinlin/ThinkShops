@@ -17,7 +17,8 @@
         <div class="d-inline-flex justify-content-start">
             <input type="text" class="input-group-sm" id="key" placeholder="空值展示所有">
             <button onclick="GetKey()" class="ml-1 btn-sm btn-success btn"><i class="fa fa-search"></i></button>
-            <button class="ml-1 btn-sm btn-success btn" >
+            <button class="ml-1 btn-sm btn-success btn"
+                    onclick="x_admin_show('添加新商品','{:url(\'index/Commodity/addCommodity\')}')">
                 <i class="fa fa-plus"></i>
             </button>
         </div>
@@ -46,7 +47,7 @@
         <tbody>
         {if count($book) == 0}
         <tr>
-            <td colspan="11">还没有任何相关图书</td>
+            <td colspan="13">还没有任何相关图书</td>
         </tr>
         {else}
         {volist name="book" id="book" $key}
@@ -54,7 +55,7 @@
             <td>{$key+1}</td>
             <td>{$book.bookname}</td>
             <td>
-                <img src="{$book.cover}" class="img-thumbnail"
+                <img src="{$book.cover == ''?'__STATIC__/common/default_cover.png':$book.cover}" class="img-thumbnail"
                      style="max-width: 30px;max-height:40px;cursor:pointer;"
                      data-toggle="modal" data-target="#myModal"
                      onclick="setModalImg(this,{$book.Id})">

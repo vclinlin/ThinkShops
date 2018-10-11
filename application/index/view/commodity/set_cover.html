@@ -53,9 +53,20 @@
         </tbody>
     </table>
 </div>
-<div class="row">
-    <div class="col-lg-7 bg-light">
-        <div class="ml-sm-2">
+<div class="container-fluid">
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="nav-item">
+            <a class="nav-link active" data-toggle="tab" href="#edit">商品信息</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#cover">封面</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" data-toggle="tab" href="#details">简介</a>
+        </li>
+    </ul>
+    <div class="tab-content">
+        <div class="mt-2 tab-pane active" id="edit">
             <form id="FormA">
                 <div class="form-group">
                     <label for="book_name">书籍名:</label>
@@ -99,23 +110,23 @@
                 <button class="btn btn-success" onclick="modify()">确定</button>
             </div>
         </div>
-    </div>
-    <div class="col-lg-5 bg-light">
-        <div class="ml-sm-2 mr-sm-2">
+        <div class="mt-2 tab-pane fade" id="cover">
             <form>
                 <div class="form-group">
                     <label for="set_cover">修改封面:(<span class="text-danger">最佳尺寸:高240px,长:180px;</span>)</label>
                     <div id="set_cover" style="height:240px;width:180px;overflow: hidden;" class="border">
                         <img src="{$book.cover}" id="preview" style="width:100%;height:auto;overflow: hidden;">
                     </div>
+                    <div class="form-group mt-2">
+                        <input type="file" accept="image/*" id="FileImg" onchange="setSrc()"
+                           class="form-control-sm">
+                    </div>
+                    <button class="btn btn-primary" onclick="uploadCover()" type="button">确定</button>
                 </div>
             </form>
-            <div class="input-group pt-2">
-                <input type="file" accept="image/*" id="FileImg" onchange="setSrc()" class="form-control" placeholder="Some text">
-                <div class="input-group-prepend">
-                    <button class="btn btn-outline-primary" onclick="uploadCover()" type="button">确定</button>
-                </div>
-            </div>
+        </div>
+        <div class="mt-2 tab-pane fade" id="details">
+            <dl>简介预留</dl>
         </div>
     </div>
 </div>

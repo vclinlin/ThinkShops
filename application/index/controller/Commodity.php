@@ -12,6 +12,8 @@ namespace app\index\controller;
 use app\index\model\Book_class;
 use app\index\model\Books;
 use app\index\model\Item_class;
+use think\Exception;
+use think\Session;
 
 class Commodity extends Index
 {
@@ -152,6 +154,51 @@ class Commodity extends Index
         echo json_encode([
             'state'=>200,
             'msg' => '上传完成'
+        ]);
+        return;
+    }
+
+    public function addCommodity()
+    {
+        if(!$data = $this->request->post())
+        {
+            return $this->fetch();
+        }
+        $model = new Books();
+        $session = new Session();
+        try{
+            $data['bookname'] = htmlentities($data['bookname']);
+            $data['press'] = htmlentities($data['press']);
+            $data['r_time'] = strtotime($data['r_time']);
+            $data['s_time'] = time();
+            $data['book_creator'] = $session->get('admin_user');
+        }catch (Exception $e){
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'非正常操作'
+            ]);
+            return;
+        }
+        if($model->get(['bookname'=>$data['bookname'],'press'=>$data['press'],
+            'r_time'=>$data['r_time'],'price'=>$data['price'],]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'商品添加失败,存在相同商品'
+            ]);
+            return;
+        }
+        if(!$model->insert($data))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'商品添加失败,稍后再试'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'添加成功'
         ]);
         return;
     }

@@ -11,6 +11,7 @@ namespace app\index\controller;
 
 use app\index\model\Book_class;
 use app\index\model\Books;
+use app\index\model\File_error;
 use app\index\model\Item_class;
 use think\Exception;
 use think\Session;
@@ -39,6 +40,18 @@ class Commodity extends Index
                 ->paginate(15,'false',['query' =>request()->param()]);
             $this->assign('book',$data);
             $this->assign('page',$data->render());
+        }
+        $model = new File_error();
+        $file_error = $model->all();
+        foreach ($file_error as $item)
+        {
+            if(file_exists('.'.$item['path']))
+            {
+                if(unlink('.'.$item['path']))
+                {
+                    $model->where(['Id'=>$item['Id']])->delete();
+                }
+            }
         }
         return $this->fetch();
     }
@@ -128,6 +141,17 @@ class Commodity extends Index
 
     public function uploadCover($Id)
     {
+        $model = new Books();
+        //获取原文件
+        $ErrorData = $model->get(['Id'=>$Id]);
+        if(!$ErrorData)
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg' => '上传失败'
+            ]);
+            return;
+        }
         $files = $this->request->file('file');
         $info = $files[0]
             ->validate([
@@ -142,7 +166,12 @@ class Commodity extends Index
             ]);
             return;
         }
-        $model = new Books();
+        $error_model = new File_error();
+        //存入废弃库
+        if($ErrorData['cover']!="")
+        {
+            $error_model -> insert(['path'=>$ErrorData['cover']]);
+        }
         if(!$model->where(['Id'=>$Id])->update(['cover'=>'/cover/' . $info->getSaveName()]))
         {
             echo json_encode([

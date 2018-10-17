@@ -113,6 +113,10 @@ class Commodity extends Index
         {
             $data['r_time'] = strtotime($data['r_time']);     //转换为时间戳
         }
+        if(isset($data['msg']))
+        {
+            $data['msg'] = htmlentities($data['msg']);    //转义图书简介
+        }
         if(isset($data['count']))
         {
             if($data['count']<$rel['sales'])  //总数小于销量
@@ -200,6 +204,7 @@ class Commodity extends Index
             $data['press'] = htmlentities($data['press']);
             $data['r_time'] = strtotime($data['r_time']);
             $data['s_time'] = time();
+            $data['msg'] = htmlentities($data['msg']);
             $data['book_creator'] = $session->get('admin_user');
         }catch (Exception $e){
             echo json_encode([

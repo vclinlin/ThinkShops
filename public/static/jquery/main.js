@@ -7,7 +7,7 @@ $(function () {
     $(".pagination").find('li').attr('class','page-item');
 
 })
-//对立的弹出层
+//对应的弹出层
 function x_admin_show(title,url,w,h){
     if (title == null || title == '') {
         title=false;

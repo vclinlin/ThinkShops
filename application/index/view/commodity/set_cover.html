@@ -61,9 +61,6 @@
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#cover">封面</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#details">简介</a>
-        </li>
     </ul>
     <div class="tab-content">
         <div class="mt-2 tab-pane active" id="edit">
@@ -105,6 +102,10 @@
                     <input id="count" type="number" class="form-control"
                            value="{$book.count}">
                 </div>
+                <div class="form-group">
+                    <label for="msg">商品简介:</label>
+                    <textarea class="form-control" rows="14" id="msg">{$book.msg}</textarea>
+                </div>
             </form>
             <div class="form-group pt-2">
                 <button class="btn btn-success" onclick="modify()">确定</button>
@@ -124,9 +125,6 @@
                     <button class="btn btn-primary" onclick="uploadCover()" type="button">确定</button>
                 </div>
             </form>
-        </div>
-        <div class="mt-2 tab-pane fade" id="details">
-            <dl>简介预留</dl>
         </div>
     </div>
 </div>
@@ -213,6 +211,7 @@
             data['count'] = count;
         }
         data['item_class_id']=item_class_id;
+        data['msg']=$("#msg").val();
         $.ajax({
             url:'{:url("index/Commodity/editCommodity",["Id"=>$book.Id])}',
             type:'post',

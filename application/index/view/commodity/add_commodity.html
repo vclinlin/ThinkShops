@@ -66,6 +66,10 @@
                     <input id="count" type="number" class="form-control"
                            value="">
                 </div>
+                <div class="form-group">
+                    <label for="msg">商品简介:</label>
+                    <textarea class="form-control" rows="14" id="msg"></textarea>
+                </div>
             </form>
             <div class="form-group pt-2">
                 <button class="btn btn-success" onclick="modify()">确定</button>
@@ -174,7 +178,7 @@
                 press,          //出版社
                 r_time,         //出版日期
                 count,          //上架数量
-
+                'msg':$("#msg").val()//图书简介
             },
             success:function (data) {
                 try{

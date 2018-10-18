@@ -84,20 +84,6 @@ class Order extends Index
         $this->assign('page',$order_data->render());
         return $this->fetch();
     }
-    //货到付款单
-    public function CashOnDelivery()
-    {
-        $order = new Order_book();
-        //查询已支付还未发货的订单,排除货到付款单
-        $order_data = $order->where([
-            'order_state'=>0,
-            'pay_state'=>0,
-            'pay'=>1
-        ])->paginate(15);
-        $this->assign('data',$order_data);
-        $this->assign('page',$order_data->render());
-        return $this->fetch();
-    }
     public function delOrder($id,$pass)
     {
         /**
@@ -210,7 +196,8 @@ class Order extends Index
             'order_number'=>$order_number,
             'Id'=>$id,
             'pay_state'=>1,
-            'order_state'=>0
+            'order_state'=>0,
+            'pay'=>0
         ])->update(['express'=>$express,'delivery_time'=>time(),'order_state'=>4]))
         {
             echo json_encode([
@@ -245,6 +232,81 @@ class Order extends Index
         echo json_encode([
             'state'=>200,
             'msg'=>'已手动确定收货'
+        ]);
+        return;
+    }
+    //货到付款单
+    public function CashOnDelivery()
+    {
+        $order = new Order_book();
+        //查询已支付还未发货的订单,排除货到付款单
+        $order_data = $order->where([
+            'order_state'=>0,
+            'pay_state'=>0,
+            'pay'=>1
+        ])->paginate(15);
+        $this->assign('data',$order_data);
+        $this->assign('page',$order_data->render());
+        return $this->fetch();
+    }
+    //货到付款发货
+    public function Deliver($id,$express,$order_number)
+    {
+        $order = new Order_book();
+        if(!$order->where([
+            'order_number'=>$order_number,
+            'Id'=>$id,
+            'pay_state'=>0,
+            'order_state'=>0,
+            'pay'=>1
+        ])->update(['express'=>$express,'delivery_time'=>time(),'order_state'=>4]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'订单信息出错,刷新后再试'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'已发货'
+        ]);
+        return;
+    }
+    //货到单未签收
+    public function Completeds()
+    {
+        $order = new Order_book();
+        //查询已发货未签收的订单,排除货到付款单
+        $order_data = $order->where([
+            'order_state'=>4,
+            'pay_state'=>0,
+            'pay'=>1
+        ])->paginate(15);
+        $this->assign('data',$order_data);
+        $this->assign('page',$order_data->render());
+        return $this->fetch();
+    }
+    public function Collects($id,$order_number)
+    {
+        $order = new Order_book();
+        if(!$order->where([
+            'order_number'=>$order_number,
+            'Id'=>$id,
+            'pay_state'=>0,
+            'order_state'=>4,
+            'pay'=>1
+        ])->update(['order_state'=>3,'pay_state'=>1]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'订单信息出错,刷新后再试'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'已确定交易完成'
         ]);
         return;
     }

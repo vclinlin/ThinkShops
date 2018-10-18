@@ -1,6 +1,6 @@
 {extend name="bases" /}
 
-{block name="title"}未发货订单{/block}
+{block name="title"}未签收订单{/block}
 
 {block name="static"}
 {/block}
@@ -8,12 +8,12 @@
 {block name="body"}
 <ul class="breadcrumb small">
     <li class="breadcrumb-item active">首页</li>
-    <li class="breadcrumb-item active">在线支付订单管理</li>
-    <li class="breadcrumb-item active">未发货</li>
+    <li class="breadcrumb-item active">货到付款订单管理</li>
+    <li class="breadcrumb-item active">未签收</li>
 </ul>
 <div class="container-fluid">
     <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
-        <strong>未发货订单:</strong>
+        <strong>未签收订单:</strong>
         <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
     </div>
     <div class="col-12 table-responsive mt-2">
@@ -58,9 +58,14 @@
                     </a>
                 </td>
                 <td>
-                    <button onclick="Deliver({$data.Id},'{$data.order_number}',{$key})" class="btn btn-sm btn-success">
-                        发货
-                    </button>
+                    <div class="btn-group btn-group-sm">
+                        <button onclick="Collect('{$data.order_number}',{$data.Id},{$key})" class="btn btn-sm btn-danger">
+                            确定收货
+                        </button>
+                        <button class="btn btn-sm btn-success">
+                            查看物流
+                        </button>
+                    </div>
                 </td>
             </tr>
             {/volist}
@@ -77,12 +82,10 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
     });
-    function Deliver(id,order_number,key) {
-        layer.prompt({title: '填写运单号', formType: 3}, function(express, index){
-            layer.close(index);
-            $.get('{:url("index/Order/DeliverNum")}',{
+    function Collect(order_number,id,key) {
+        layer.confirm('确定该货到单已完成交易?',{icon:0},function () {
+            $.get('{:url("index/Order/Collects")}',{
                 id,
-                express,
                 order_number
             },function (res) {
                 if(res.state == 400)
@@ -92,13 +95,12 @@
                 }
                 if(res.state == 200)
                 {
-                    layer.msg(res.msg,{icon:0,time:2000},function () {
-                        $("#Tr"+key).remove();
-                    });
+                    layer.msg(res.msg,{icon:0,time:2000});
+                    $("#Tr"+key).remove();
                     return;
                 }
             },'json');
-        });
+        })
     }
 </script>
 {/block}

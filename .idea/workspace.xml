@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93faaaf-8d9e-469a-a64f-b0b923e1cd87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/index/view/order/cancel_order.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/index/view/order/complete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/order/completeds.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/order/complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/complete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/completed.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/completed.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/not_deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/not_deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/not_pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/not_pay.html" afterDir="false" />
@@ -27,25 +27,25 @@
     <session id="-734128185">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="12261" />
+          <entry key="html" value="12277" />
           <entry key="js" value="24" />
-          <entry key="php" value="8696" />
-          <entry key="txt" value="269" />
+          <entry key="php" value="8802" />
+          <entry key="txt" value="279" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="12261" />
+          <entry key="HTML" value="12277" />
           <entry key="JavaScript" value="24" />
-          <entry key="PHP" value="8696" />
-          <entry key="PLAIN_TEXT" value="269" />
+          <entry key="PHP" value="8802" />
+          <entry key="PLAIN_TEXT" value="279" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
           <entry key="htaccess" value="1" />
-          <entry key="html" value="90" />
+          <entry key="html" value="97" />
           <entry key="jpg" value="2" />
           <entry key="js" value="7" />
           <entry key="php" value="40" />
@@ -54,7 +54,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="90" />
+          <entry key="HTML" value="97" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="7" />
           <entry key="PHP" value="40" />
@@ -69,9 +69,9 @@
       </usages-collector>
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.0" value="4" />
-          <entry key="project.open.time.1" value="3" />
+          <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.10" value="2" />
           <entry key="project.open.time.11" value="2" />
           <entry key="project.open.time.12" value="1" />
@@ -79,7 +79,7 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="6" />
           <entry key="project.open.time.9" value="2" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
     </session>
@@ -89,35 +89,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="150" column="39" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/cancel_order.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+            <state relative-caret-position="125">
+              <caret line="104" column="38" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="38" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/order/completeds.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="52">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
+            <state relative-caret-position="205">
+              <caret line="289" column="28" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="28" />
               <folding>
                 <element signature="e#123#154#0#PHP" expanded="true" />
               </folding>
@@ -126,15 +126,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/not_pay.html">
+        <entry file="file://$PROJECT_DIR$/application/index/view/order/not_deliver.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
-              <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+            <state relative-caret-position="52">
+              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -142,8 +137,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/view/order/completed.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1577">
-              <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+            <state relative-caret-position="52">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -210,13 +205,15 @@
         <option value="$PROJECT_DIR$/application/index/view/bases.html" />
         <option value="$PROJECT_DIR$/application/index/view/commodity/purchase.html" />
         <option value="$PROJECT_DIR$/application/index/controller/Commodity.php" />
+        <option value="$PROJECT_DIR$/application/index/view/order/cancel_order.html" />
+        <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
+        <option value="$PROJECT_DIR$/application/index/controller/Order.php" />
+        <option value="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/completeds.html" />
         <option value="$PROJECT_DIR$/application/index/view/order/not_pay.html" />
         <option value="$PROJECT_DIR$/application/index/view/order/not_deliver.html" />
         <option value="$PROJECT_DIR$/application/index/view/order/completed.html" />
         <option value="$PROJECT_DIR$/application/index/view/order/complete.html" />
-        <option value="$PROJECT_DIR$/application/index/view/order/cancel_order.html" />
-        <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
-        <option value="$PROJECT_DIR$/application/index/controller/Order.php" />
       </list>
     </option>
   </component>
@@ -293,6 +290,14 @@
               <item name="index" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
               <item name="commodity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ThinkShops" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ThinkShops" type="462c0819:PsiDirectoryNode" />
+              <item name="application" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="index" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ThinkShops" type="b2602c69:ProjectViewProjectNode" />
@@ -398,7 +403,8 @@
       <workItem from="1539417728963" duration="28000" />
       <workItem from="1539492399836" duration="971000" />
       <workItem from="1539768288667" duration="1814000" />
-      <workItem from="1539855612579" duration="13596000" />
+      <workItem from="1539855612579" duration="13681000" />
+      <workItem from="1539876950806" duration="656000" />
     </task>
     <task id="LOCAL-00001" summary="完善分类管理">
       <created>1538189538175</created>
@@ -596,17 +602,24 @@
       <option name="project" value="LOCAL" />
       <updated>1539864788891</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="货到付款订单管理">
+      <created>1539869338083</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1539869338083</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113763000" />
+    <option name="totallyTimeSpent" value="114504000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33742005" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3411514" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -705,10 +718,10 @@
     <MESSAGE value="未支付订单管理" />
     <MESSAGE value="商品管理新增删除错误商品" />
     <MESSAGE value="完成发货" />
-    <option name="LAST_COMMIT_MESSAGE" value="完成发货" />
+    <MESSAGE value="货到付款订单管理" />
+    <option name="LAST_COMMIT_MESSAGE" value="货到付款订单管理" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/view/common/set_home_url.html" />
     <entry file="file://$PROJECT_DIR$/application/index/view/page_management/set_home_url.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -923,9 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="52">
           <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -936,16 +946,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/static/bootstrap4.0/js/extend.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="4" column="38" lean-forward="true" selection-start-line="4" selection-start-column="38" selection-end-line="4" selection-end-column="38" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/static/bootstrap4.0/js/extend.js" />
     <entry file="file://$PROJECT_DIR$/public/static/bootstrap4.0/js/bootstrap.bundle.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1393">
@@ -977,9 +978,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-17">
           <caret line="239" column="37" selection-start-line="239" selection-start-column="37" selection-end-line="239" selection-end-column="37" />
-          <folding>
-            <element signature="e#122#153#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -987,65 +985,72 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
           <caret line="146" column="10" lean-forward="true" selection-start-line="146" selection-start-column="10" selection-end-line="146" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/cancel_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="10" column="47" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="104" column="38" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/not_pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="205">
+          <caret line="289" column="28" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="28" />
           <folding>
-            <element signature="n#style#0;n#img#0;n#td#2;n#tr#1;n#tbody#0;n#table#0;n#div#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#div#0;n#div#2;n#!!top" expanded="true" />
+            <element signature="e#123#154#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/order/not_deliver.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="52">
+          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/not_pay.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/completeds.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/cancel_order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="31" column="21" lean-forward="true" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
+        <state relative-caret-position="52">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/order/completed.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1577">
-          <caret line="11" column="42" selection-start-line="11" selection-start-column="42" selection-end-line="11" selection-end-column="42" />
+        <state relative-caret-position="52">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="150" column="39" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="67" column="20" selection-start-line="67" selection-start-column="20" selection-end-line="67" selection-end-column="20" />
-          <folding>
-            <element signature="e#123#154#0#PHP" expanded="true" />
-          </folding>
+        <state relative-caret-position="52">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
         </state>
       </provider>
     </entry>

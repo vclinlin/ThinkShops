@@ -9,11 +9,11 @@
 <ul class="breadcrumb small">
     <li class="breadcrumb-item active">首页</li>
     <li class="breadcrumb-item active">订单管理</li>
-    <li class="breadcrumb-item active">未支付</li>
+    <li class="breadcrumb-item active">已失效</li>
 </ul>
 <div class="container-fluid">
     <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
-        <strong>未支付订单:</strong>
+        <strong>已失效订单:</strong>
         <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
     </div>
     <div class="col-12 table-responsive mt-2">
@@ -28,13 +28,14 @@
                 <th>下单时间</th>
                 <th>收货信息</th>
                 <th>备注</th>
+                <th>原因</th>
                 <th>操作</th>
             </tr>
             </thead>
             <tbody>
             {if count($data) == 0 || !$data}
             <tr>
-                <td colspan="9">还没有相关订单</td>
+                <td colspan="10">还没有相关订单</td>
             </tr>
             {else}
             {volist name="data" id="data" $key}
@@ -56,6 +57,9 @@
                        data-trigger="focus" data-content="{$data.msg}">
                     {$data.msg==''?'无备注':mb_substr($data.msg,0,8,'utf-8').'...'}
                     </a>
+                </td>
+                <td>
+                    {$data.order_state==1?'用户取消':'超时未支付'}
                 </td>
                 <td>
                     <button onclick="delTr({$data.Id},{$key})" class="btn btn-sm btn-danger">
@@ -83,7 +87,7 @@
                 layer.prompt({title: '输入管理员密码', formType:1},function(pass,index){
                     layer.close(index);
                     //异步验证
-                    $.get('{:url("index/Order/delOrder")}',{
+                    $.get('{:url("index/Order/delCancelOrder")}',{
                         id,
                         pass
                     },function (res) {

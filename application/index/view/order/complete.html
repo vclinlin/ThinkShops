@@ -9,11 +9,11 @@
 <ul class="breadcrumb small">
     <li class="breadcrumb-item active">首页</li>
     <li class="breadcrumb-item active">订单管理</li>
-    <li class="breadcrumb-item active">未支付</li>
+    <li class="breadcrumb-item active">已完成</li>
 </ul>
 <div class="container-fluid">
     <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
-        <strong>未支付订单:</strong>
+        <strong>已完成订单:</strong>
         <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
     </div>
     <div class="col-12 table-responsive mt-2">
@@ -28,13 +28,12 @@
                 <th>下单时间</th>
                 <th>收货信息</th>
                 <th>备注</th>
-                <th>操作</th>
             </tr>
             </thead>
             <tbody>
             {if count($data) == 0 || !$data}
             <tr>
-                <td colspan="9">还没有相关订单</td>
+                <td colspan="8">还没有相关订单</td>
             </tr>
             {else}
             {volist name="data" id="data" $key}
@@ -57,11 +56,6 @@
                     {$data.msg==''?'无备注':mb_substr($data.msg,0,8,'utf-8').'...'}
                     </a>
                 </td>
-                <td>
-                    <button onclick="delTr({$data.Id},{$key})" class="btn btn-sm btn-danger">
-                        删除
-                    </button>
-                </td>
             </tr>
             {/volist}
             {/if}
@@ -77,31 +71,25 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
     });
-    function delTr(id,key) {
-        layer.confirm('确定删除该订单?不建议这样做',{icon:0},
-            function () {
-                layer.prompt({title: '输入管理员密码', formType:1},function(pass,index){
-                    layer.close(index);
-                    //异步验证
-                    $.get('{:url("index/Order/delOrder")}',{
-                        id,
-                        pass
-                    },function (res) {
-                        if(res.state == 400)
-                        {
-                            layer.msg(res.msg,{icon:5,time:2000});
-                            return;
-                        }
-                        if(res.state == 200)
-                        {
-                            layer.msg(res.msg,{icon:0,time:2000},function () {
-                                $("#Tr"+key).remove();
-                            });
-                            return;
-                        }
-                    },'json');
-                });
-            });
+    function Collect(order_number,id,key) {
+        layer.confirm('确定买家已收货?',{icon:0},function () {
+            $.get('{:url("index/Order/Collect")}',{
+                id,
+                order_number
+            },function (res) {
+                if(res.state == 400)
+                {
+                    layer.msg(res.msg,{icon:5,time:2000});
+                    return;
+                }
+                if(res.state == 200)
+                {
+                    layer.msg(res.msg,{icon:0,time:2000});
+                    $("#Tr"+key).remove();
+                    return;
+                }
+            },'json');
+        })
     }
 </script>
 {/block}

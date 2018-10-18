@@ -9,11 +9,11 @@
 <ul class="breadcrumb small">
     <li class="breadcrumb-item active">首页</li>
     <li class="breadcrumb-item active">订单管理</li>
-    <li class="breadcrumb-item active">未支付</li>
+    <li class="breadcrumb-item active">未签收</li>
 </ul>
 <div class="container-fluid">
     <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
-        <strong>未支付订单:</strong>
+        <strong>未签收订单:</strong>
         <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
     </div>
     <div class="col-12 table-responsive mt-2">
@@ -24,6 +24,7 @@
                 <th>订单号</th>
                 <th>买家</th>
                 <th>商品信息</th>
+                <th>金额</th>
                 <th>下单时间</th>
                 <th>收货信息</th>
                 <th>备注</th>
@@ -33,15 +34,16 @@
             <tbody>
             {if count($data) == 0 || !$data}
             <tr>
-                <td colspan="8">还没有相关订单</td>
+                <td colspan="9">还没有相关订单</td>
             </tr>
             {else}
             {volist name="data" id="data" $key}
-            <tr>
+            <tr id="Tr{$key}">
                 <td>{$key+1}</td>
                 <td>{$data.order_number}</td>
                 <td>{$data.user_id}</td>
                 <td>{$data.books_id.$data.books_sum}</td>
+                <td class="text-danger">￥ {$data.money}</td>
                 <td>{$data.create_time}</td>
                 <td>
                     <a href="#" data-toggle="popover" data-placement="top"
@@ -57,7 +59,7 @@
                 </td>
                 <td>
                     <div class="btn-group btn-group-sm">
-                        <button class="btn btn-sm btn-danger">
+                        <button onclick="Collect('{$data.order_number}',{$data.Id},{$key})" class="btn btn-sm btn-danger">
                             确定收货
                         </button>
                         <button class="btn btn-sm btn-success">
@@ -80,5 +82,25 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
     });
+    function Collect(order_number,id,key) {
+        layer.confirm('确定买家已收货?',{icon:0},function () {
+            $.get('{:url("index/Order/Collect")}',{
+                id,
+                order_number
+            },function (res) {
+                if(res.state == 400)
+                {
+                    layer.msg(res.msg,{icon:5,time:2000});
+                    return;
+                }
+                if(res.state == 200)
+                {
+                    layer.msg(res.msg,{icon:0,time:2000});
+                    $("#Tr"+key).remove();
+                    return;
+                }
+            },'json');
+        })
+    }
 </script>
 {/block}

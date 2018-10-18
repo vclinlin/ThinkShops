@@ -102,7 +102,7 @@
                 <li>
                     <a href="javascript:;">
                         <i class="iconfont">&#xe723;</i>
-                        <cite>订单管理</cite>
+                        <cite>在线支付订单管理</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
                     <ul class="sub-menu">
@@ -125,15 +125,15 @@
                             </a>
                         </li >
                         <li>
-                            <a _href="cate.html">
+                            <a _href="{:url('/index/Order/complete')}">
                                 <i class="iconfont">&#xe6a7;</i>
                                 <cite>已完成</cite>
                             </a>
                         </li >
                         <li>
-                            <a _href="cate.html">
+                            <a _href="{:url('/index/Order/cancelOrder')}">
                                 <i class="iconfont">&#xe6a7;</i>
-                                <cite>已取消</cite>
+                                <cite>已失效</cite>
                             </a>
                         </li >
                     </ul>
@@ -141,14 +141,20 @@
                 <li>
                     <a href="javascript:;">
                         <i class="iconfont">&#xe723;</i>
-                        <cite>物流管理</cite>
+                        <cite>货到付款订单管理</cite>
                         <i class="iconfont nav_right">&#xe697;</i>
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a _href="city.html">
+                            <a _href="{:url('/index/Order/CashOnDelivery')}">
                                 <i class="iconfont">&#xe6a7;</i>
-                                <cite>物流信息</cite>
+                                <cite>待发货</cite>
+                            </a>
+                        </li >
+                        <li>
+                            <a _href="{:url('/index/Order/CashOnDelivery')}">
+                                <i class="iconfont">&#xe6a7;</i>
+                                <cite>已完成</cite>
                             </a>
                         </li >
                         <li>

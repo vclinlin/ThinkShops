@@ -1,0 +1,65 @@
+{extend name="bases" /}
+
+{block name="title"}未支付订单{/block}
+
+{block name="static"}
+
+{/block}
+
+{block name="body"}
+<ul class="breadcrumb small">
+    <li class="breadcrumb-item active">首页</li>
+    <li class="breadcrumb-item active">订单管理</li>
+    <li class="breadcrumb-item active">未支付</li>
+</ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
+        <strong>未支付订单:</strong>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="col-12 table-responsive mt-2">
+        <table class="table table-bordered table-nowrap text-center">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>订单号</th>
+                <th>买家</th>
+                <th>商品信息</th>
+                <th>下单时间</th>
+                <th>收货信息</th>
+                <th>备注</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {if count($data) == 0 || !$data}
+            <tr>
+                <td colspan="6">还没有相关订单</td>
+            </tr>
+            {else}
+            {volist name="data" id="data" $key}
+            <tr>
+                <td>{$key+1}</td>
+                <td>{$data.order_number}</td>
+                <td>{$data.user_id}</td>
+                <td>{$data.books_id.$data.books_sum}</td>
+                <td>{$data.create_time}</td>
+                <td>
+                    <a href="#"  title="{$data.address}">
+                        {:mb_substr($data.address,0,8,'utf-8').'...';}
+                    </a>
+                    <div class=""></div>
+                </td>
+                <td>{$data.msg==''?'无备注':$data.msg}</td>
+                <td>取消</td>
+            </tr>
+            {/volist}
+            {/if}
+            </tbody>
+        </table>
+        <div class="col-12 d-inline-flex justify-content-center mt-2">
+            {$page|raw}
+        </div>
+    </div>
+</div>
+{/block}

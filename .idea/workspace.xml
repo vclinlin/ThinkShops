@@ -2,13 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a93faaaf-8d9e-469a-a64f-b0b923e1cd87" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/index/view/order/completeds.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/index/view/order/completes.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/controller/Order.php" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/controller/Order.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/index/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/index/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/order/cancel_order.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/cancel_order.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/complete.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/completed.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/completed.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/index/view/order/completeds.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/completeds.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/not_deliver.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/not_deliver.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/index/view/order/not_pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/application/index/view/order/not_pay.html" afterDir="false" />
     </list>
@@ -27,25 +29,25 @@
     <session id="-734128185">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="12277" />
+          <entry key="html" value="12299" />
           <entry key="js" value="24" />
-          <entry key="php" value="8802" />
-          <entry key="txt" value="279" />
+          <entry key="php" value="8820" />
+          <entry key="txt" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="12277" />
+          <entry key="HTML" value="12299" />
           <entry key="JavaScript" value="24" />
-          <entry key="PHP" value="8802" />
-          <entry key="PLAIN_TEXT" value="279" />
+          <entry key="PHP" value="8820" />
+          <entry key="PLAIN_TEXT" value="281" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="2" />
           <entry key="htaccess" value="1" />
-          <entry key="html" value="97" />
+          <entry key="html" value="106" />
           <entry key="jpg" value="2" />
           <entry key="js" value="7" />
           <entry key="php" value="40" />
@@ -54,7 +56,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="2" />
-          <entry key="HTML" value="97" />
+          <entry key="HTML" value="106" />
           <entry key="Image" value="2" />
           <entry key="JavaScript" value="7" />
           <entry key="PHP" value="40" />
@@ -89,56 +91,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="125">
-              <caret line="104" column="38" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="38" />
+            <state relative-caret-position="2652">
+              <caret line="162" column="39" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="312">
+              <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/completeds.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/application/index/controller/Order.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="205">
-              <caret line="289" column="28" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="28" />
+            <state relative-caret-position="387">
+              <caret line="313" column="31" lean-forward="true" selection-start-line="313" selection-start-column="31" selection-end-line="313" selection-end-column="31" />
               <folding>
                 <element signature="e#123#154#0#PHP" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/not_deliver.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/application/index/view/order/completed.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="52">
-              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -205,15 +180,16 @@
         <option value="$PROJECT_DIR$/application/index/view/bases.html" />
         <option value="$PROJECT_DIR$/application/index/view/commodity/purchase.html" />
         <option value="$PROJECT_DIR$/application/index/controller/Commodity.php" />
-        <option value="$PROJECT_DIR$/application/index/view/order/cancel_order.html" />
-        <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
         <option value="$PROJECT_DIR$/application/index/controller/Order.php" />
+        <option value="$PROJECT_DIR$/application/index/view/index/index.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/completes.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/cancel_order.html" />
         <option value="$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html" />
-        <option value="$PROJECT_DIR$/application/index/view/order/completeds.html" />
-        <option value="$PROJECT_DIR$/application/index/view/order/not_pay.html" />
-        <option value="$PROJECT_DIR$/application/index/view/order/not_deliver.html" />
-        <option value="$PROJECT_DIR$/application/index/view/order/completed.html" />
         <option value="$PROJECT_DIR$/application/index/view/order/complete.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/completed.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/completeds.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/not_deliver.html" />
+        <option value="$PROJECT_DIR$/application/index/view/order/not_pay.html" />
       </list>
     </option>
   </component>
@@ -404,7 +380,7 @@
       <workItem from="1539492399836" duration="971000" />
       <workItem from="1539768288667" duration="1814000" />
       <workItem from="1539855612579" duration="13681000" />
-      <workItem from="1539876950806" duration="656000" />
+      <workItem from="1539876950806" duration="973000" />
     </task>
     <task id="LOCAL-00001" summary="完善分类管理">
       <created>1538189538175</created>
@@ -609,11 +585,18 @@
       <option name="project" value="LOCAL" />
       <updated>1539869338083</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="货到付款订单管理完善">
+      <created>1539877682713</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1539877682713</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="114504000" />
+    <option name="totallyTimeSpent" value="114821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="22" width="1936" height="1066" extended-state="6" />
@@ -719,16 +702,10 @@
     <MESSAGE value="商品管理新增删除错误商品" />
     <MESSAGE value="完成发货" />
     <MESSAGE value="货到付款订单管理" />
-    <option name="LAST_COMMIT_MESSAGE" value="货到付款订单管理" />
+    <MESSAGE value="货到付款订单管理完善" />
+    <option name="LAST_COMMIT_MESSAGE" value="货到付款订单管理完善" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/application/index/view/page_management/set_home_url.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="413">
-          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/model/Broadcast_msg.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
@@ -988,69 +965,76 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/cancel_order.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="31" column="21" selection-start-line="31" selection-start-column="21" selection-end-line="31" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="10" column="47" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="104" column="38" selection-start-line="104" selection-start-column="30" selection-end-line="104" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/not_pay.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="22" lean-forward="true" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/controller/Order.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="289" column="28" selection-start-line="289" selection-start-column="20" selection-end-line="289" selection-end-column="28" />
-          <folding>
-            <element signature="e#123#154#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/not_deliver.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="20" selection-start-line="2" selection-start-column="20" selection-end-line="2" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/completeds.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/application/index/view/order/completed.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="2652">
+          <caret line="162" column="39" selection-start-line="162" selection-start-column="39" selection-end-line="162" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/application/index/view/order/complete.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        <state relative-caret-position="312">
+          <caret line="45" column="65" selection-start-line="45" selection-start-column="65" selection-end-line="45" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/completed.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/completeds.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/completes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="45" column="65" lean-forward="true" selection-start-line="45" selection-start-column="16" selection-end-line="45" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/not_deliver.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/not_pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/cash_on_delivery.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="46" column="65" selection-start-line="46" selection-start-column="65" selection-end-line="46" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/view/order/cancel_order.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="47" column="65" selection-start-line="47" selection-start-column="65" selection-end-line="47" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/application/index/controller/Order.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="387">
+          <caret line="313" column="31" lean-forward="true" selection-start-line="313" selection-start-column="31" selection-end-line="313" selection-end-column="31" />
+          <folding>
+            <element signature="e#123#154#0#PHP" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

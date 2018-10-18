@@ -310,4 +310,18 @@ class Order extends Index
         ]);
         return;
     }
+    //货到单已完成
+    public function completes()
+    {
+        $order = new Order_book();
+        //查询已完成的订单
+        $order_data = $order->where([
+            'order_state'=>3,
+            'pay_state'=>1,
+            'pay'=>1
+        ])->paginate(15);
+        $this->assign('data',$order_data);
+        $this->assign('page',$order_data->render());
+        return $this->fetch();
+    }
 }

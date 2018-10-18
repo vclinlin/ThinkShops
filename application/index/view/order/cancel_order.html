@@ -45,7 +45,7 @@
                 <td>{$data.user_id}</td>
                 <td>{$data.books_id.$data.books_sum}</td>
                 <td class="text-danger">￥ {$data.money}</td>
-                <td>{$data.create_time}</td>
+                <td>{:date('Y-m-d H:i:s',$data.create_time)}</td>
                 <td>
                     <a href="#" data-toggle="popover" data-placement="top"
                        data-trigger="focus" data-content="{$data.address}">

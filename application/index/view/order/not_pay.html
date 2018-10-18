@@ -37,7 +37,7 @@
             </tr>
             {else}
             {volist name="data" id="data" $key}
-            <tr>
+            <tr id="Tr{$key}">
                 <td>{$key+1}</td>
                 <td>{$data.order_number}</td>
                 <td>{$data.user_id}</td>
@@ -56,14 +56,9 @@
                     </a>
                 </td>
                 <td>
-                    <div class="btn-group btn-group-sm">
-                        <button class="btn btn-sm btn-danger">
-                            取消
-                        </button>
-                        <button class="btn btn-sm btn-info">
-                            删除
-                        </button>
-                    </div>
+                    <button onclick="delTr({$data.Id},{$key})" class="btn btn-sm btn-danger">
+                        删除
+                    </button>
                 </td>
             </tr>
             {/volist}
@@ -80,5 +75,31 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
     });
+    function delTr(id,key) {
+        layer.confirm('确定删除该订单?不建议这样做',{icon:0},
+            function () {
+                layer.prompt({title: '输入管理员密码', formType:1},function(pass,index){
+                    layer.close(index);
+                    //异步验证
+                    $.get('{:url("index/Order/delOrder")}',{
+                        id,
+                        pass
+                    },function (res) {
+                        if(res.state == 400)
+                        {
+                            layer.msg(res.msg,{icon:5,time:2000});
+                            return;
+                        }
+                        if(res.state == 200)
+                        {
+                            layer.msg(res.msg,{icon:0,time:2000},function () {
+                                $("#Tr"+key).remove();
+                            });
+                            return;
+                        }
+                    },'json');
+                });
+            });
+    }
 </script>
 {/block}

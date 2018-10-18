@@ -37,7 +37,7 @@
             </tr>
             {else}
             {volist name="data" id="data" $key}
-            <tr>
+            <tr id="Tr{$key}">
                 <td>{$key+1}</td>
                 <td>{$data.order_number}</td>
                 <td>{$data.user_id}</td>
@@ -56,14 +56,9 @@
                     </a>
                 </td>
                 <td>
-                    <div class="btn-group btn-group-sm">
-                        <button class="btn btn-sm btn-danger">
-                            取消
-                        </button>
-                        <button class="btn btn-sm btn-success">
-                            发货
-                        </button>
-                    </div>
+                    <button onclick="Deliver({$data.Id},'{$data.order_number}',{$key})" class="btn btn-sm btn-success">
+                        发货
+                    </button>
                 </td>
             </tr>
             {/volist}
@@ -80,5 +75,28 @@
     $(document).ready(function(){
         $('[data-toggle="popover"]').popover();
     });
+    function Deliver(id,order_number,key) {
+        layer.prompt({title: '填写运单号', formType: 3}, function(express, index){
+            layer.close(index);
+            $.get('{:url("index/Order/DeliverNum")}',{
+                id,
+                express,
+                order_number
+            },function (res) {
+                if(res.state == 400)
+                {
+                    layer.msg(res.msg,{icon:5,time:2000});
+                    return;
+                }
+                if(res.state == 200)
+                {
+                    layer.msg(res.msg,{icon:0,time:2000},function () {
+                        $("#Tr"+key).remove();
+                    });
+                    return;
+                }
+            },'json');
+        });
+    }
 </script>
 {/block}

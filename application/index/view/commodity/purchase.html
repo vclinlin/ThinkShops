@@ -51,7 +51,7 @@
         </tr>
         {else}
         {volist name="book" id="book" $key}
-        <tr class="{if ($book.count-$book.sales) <= 10} table-danger{/if}">
+        <tr id="Tr{$key}" class="{if ($book.count-$book.sales) <= 10} table-danger{/if}">
             <td>{$key+1}</td>
             <td>{$book.bookname}</td>
             <td>
@@ -73,7 +73,7 @@
                 <div class="btn-group btn-group-sm">
                     <button type="button" class="btn btn-primary"
                     onclick='x_admin_show("编辑商品信息","{:url(\"index/Commodity/setCover\",[\"Id\"=>$book.Id])}")'>编辑</button>
-                    <button type="button" class="btn btn-danger">删除</button>
+                    <button onclick="delTr({$book.Id},{$key})" type="button" class="btn btn-danger">删除</button>
                 </div>
             </td>
         </tr>
@@ -140,6 +140,32 @@
     function setCover() {
         x_admin_show('编辑商品信息','{:url("index/Commodity/setCover")}?Id='+$('#check').data('val'));
         $("#myModal").modal('hide');
+    }
+    function delTr(id,key) {
+        layer.confirm('确定删除该商品,已存在订单与流水数据将被保存',{icon:0},
+        function () {
+            layer.prompt({title: '输入管理员密码', formType:1},function(pass,index){
+                layer.close(index);
+                //异步验证
+                $.get('{:url("index/Commodity/delBooks")}',{
+                    id,
+                    pass
+                },function (res) {
+                    if(res.state == 400)
+                    {
+                        layer.msg(res.msg,{icon:5,time:2000});
+                        return;
+                    }
+                    if(res.state == 200)
+                    {
+                        layer.msg(res.msg,{icon:0,time:2000},function () {
+                            $("#Tr"+key).remove();
+                        });
+                        return;
+                    }
+                },'json');
+            });
+        });
     }
 </script>
 {/block}

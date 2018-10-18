@@ -9,6 +9,7 @@
 namespace app\index\controller;
 
 
+use app\index\model\Admin_user;
 use app\index\model\Book_class;
 use app\index\model\Books;
 use app\index\model\File_error;
@@ -234,6 +235,52 @@ class Commodity extends Index
             'state'=>200,
             'msg'=>'添加成功'
         ]);
+        return;
+    }
+    public function delBooks($pass,$id){
+        /**
+         * 验证密码
+         */
+        $session = new Session();
+        //离线验证
+        $pass = md5(md5($session->get('admin_user')).md5($pass).md5('!@#$%^&*()_+'));
+        if($pass != $session->get('admin_pass'))
+        {
+            echo json_encode([
+            'state'=>400,
+            'msg'=>'密码错误'
+            ]);
+            return;
+        }
+        //绝对验证
+        $user = new Admin_user();
+        if(!$user->get([
+            'user_id'=>$session->get('admin_user'),
+            'pass'=>$pass,
+            'grade'=>9
+        ]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'权限不足'
+            ]);
+            return;
+        }
+        //删除商品
+        $book = new Books();
+        if(!$book->where(['Id'=>$id])->delete())
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'删除失败'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'已删除'
+        ]);
+        //后续补充写入日志
         return;
     }
 }

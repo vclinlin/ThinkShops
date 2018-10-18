@@ -26,4 +26,30 @@ class Order extends Index
         $this->assign('page',$order_data->render());
         return $this->fetch();
     }
+    //未发货
+    public function notDeliver()
+    {
+        $order = new Order_book();
+        //查询已支付还未发货的订单
+        $order_data = $order->where([
+            'order_state'=>0,
+            'pay_state'=>1
+        ])->paginate(15);
+        $this->assign('data',$order_data);
+        $this->assign('page',$order_data->render());
+        return $this->fetch();
+    }
+    //已完成
+    public function Completed()
+    {
+        $order = new Order_book();
+        //查询已发货未签收的订单
+        $order_data = $order->where([
+            'order_state'=>4,
+            'pay_state'=>1
+        ])->paginate(15);
+        $this->assign('data',$order_data);
+        $this->assign('page',$order_data->render());
+        return $this->fetch();
+    }
 }

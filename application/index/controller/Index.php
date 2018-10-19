@@ -3,6 +3,7 @@ namespace app\index\controller;
 
 use app\index\model\Admin_url;
 use app\index\model\Admin_user;
+use app\index\model\Ordinary_users;
 use think\Controller;
 use think\Session;
 
@@ -218,5 +219,145 @@ class Index extends Controller
     {
         $this->assign('msg',['msg'=>$msg]);
         return $this->fetch();
+    }
+
+    public function AdminUser()
+    {
+        $model = new Admin_user();
+        $session = new Session();
+        if(!$model -> get(['user_id'=>$session->get('admin_user'),
+            'grade'=>9
+            ]))
+        {
+            echo '普通管理员,禁止访问';
+            return ;
+        }
+        $data = $model->where([
+            'grade'=>1
+        ])->paginate(15);
+        $this->assign('data',$data);
+        $this->assign('page',$data->render());
+        return $this->fetch();
+    }
+    public function setAdminUser($user_id,$name,$pass)
+    {
+        $model = new Admin_user();
+        $session = new Session();
+        if(!$model -> get(['user_id'=>$session->get('admin_user'),
+            'grade'=>9
+        ]))
+        {
+            echo json_encode([
+                "msg"=>'普通管理员,禁止访问',
+                "state"=>400
+            ]);
+            return;
+        }
+        if($model->get(['user_id'=>$user_id]))
+        {
+            echo json_encode([
+                "msg"=>'该用户,已存在',
+                "state"=>400
+            ]);
+            return;
+        }
+        $pass = md5(md5($user_id).md5($pass).md5("!@#$%^&*()_+"));
+        if(!$model->insert(['user_id'=>$user_id,'pass'=>$pass,'creation_time'=>time(),
+            'grade'=>1,'user_name'=>htmlentities($name)]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'设置失败'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'设置完成'
+        ]);
+        return;
+    }
+
+    public function delAdmin($id,$user_id)
+    {
+        $model = new Admin_user();
+        $session = new Session();
+        if(!$model -> get(['user_id'=>$session->get('admin_user'),
+            'grade'=>9
+        ]))
+        {
+            echo json_encode([
+                "msg"=>'普通管理员,禁止访问',
+                "state"=>400
+            ]);
+            return;
+        }
+        if($user_id == $session->get('admin_user'))
+        {
+            echo json_encode([
+                "msg"=>'不可以删除你自己',
+                "state"=>400
+            ]);
+            return;
+        }
+        if(!$model->where(['Id'=>$id,'user_id'=>$user_id,'grade'=>1])->delete())
+        {
+            echo json_encode([
+                "msg"=>'删除失败,或用户不存在',
+                "state"=>400
+            ]);
+            return;
+        }
+        echo json_encode([
+            "msg"=>'已删除',
+            "state"=>200
+        ]);
+        return;
+    }
+
+    public function editUser()
+    {
+        $user = new Ordinary_users();
+        $data = $user->paginate(15);
+        $this->assign('data',$data);
+        $this->assign('page',$data->render());
+        return $this->fetch();
+    }
+
+    public function payMoney($id,$pass,$money)
+    {
+        if($money<=0)
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'充值失败,刷新后再试'
+            ]);
+            return;
+        }
+        $session = new Session();
+        $pass = md5(md5($session->get('admin_user')).md5($pass).md5('!@#$%^&*()_+'));
+        $Admin = new Admin_user();
+        if(!$Admin->get(['user_id'=>$session->get('admin_user'),'pass'=>$pass]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'密码错误'
+            ]);
+            return;
+        }
+        $model = new Ordinary_users();
+        if(!$model->where(['Id'=>$id])->setInc('user_money',$money))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'充值失败,刷新后再试'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'充值成功'
+        ]);
+        return;
     }
 }

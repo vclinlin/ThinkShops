@@ -1,0 +1,139 @@
+{extend name="bases" /}
+
+{block name="title"}管理员管理{/block}
+
+{block name="static"}
+{/block}
+
+{block name="body"}
+<ul class="breadcrumb small">
+    <li class="breadcrumb-item active">首页</li>
+    <li class="breadcrumb-item active">用户管理</li>
+    <li class="breadcrumb-item active">管理员管理</li>
+</ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
+        <button class="btn-sm btn btn-success"
+                data-toggle="modal" data-target="#myModal">添加</button>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="col-12 table-responsive mt-2">
+        <table class="table table-bordered table-nowrap text-center">
+            <thead>
+            <tr>
+                <th>序号</th>
+                <th>用户名</th>
+                <th>账号</th>
+                <th>创建时间</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            {volist id="data" name="data" $key}
+            <tr>
+                <td>{$key+1}</td>
+                <td>{$data.user_name}</td>
+                <td>{$data.user_id}</td>
+                <td>{:date('Y-m-d H:i:s',$data.creation_time)}</td>
+                <td>
+                    <button class="btn btn-sm btn-danger"
+                    onclick="delAdmin({$data.Id},'{$data.user_id}')">删除</button>
+                </td>
+            </tr>
+            {/volist}
+            </tbody>
+        </table>
+        <div class="col-12 d-inline-flex justify-content-center mt-2">
+            {$page|raw}
+        </div>
+    </div>
+</div>
+<!-- 模态框 -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+
+            <!-- 模态框头部 -->
+            <div class="modal-header">
+                <h4 class="modal-title">填写管理员信息</h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- 模态框主体 -->
+            <div class="modal-body">
+                <div>
+                    <div class="form-group">
+                        <label for="name">用户名:</label>
+                        <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                        <label for="user_id">账号:</label>
+                        <input type="text" class="form-control" id="user_id">
+                    </div>
+                    <div class="form-group">
+                        <label for="pwd">Password:</label>
+                        <input type="password" class="form-control" id="pwd">
+                    </div>
+                    <button id="setAdmin" type="button" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    $("#setAdmin").click(function () {
+        var user_id = $("#user_id").val().trim();
+        var pass = $("#pwd").val().trim();
+        var name = $("#name").val().trim();
+        if(!name||name.length<=0||name=="")
+        {
+            layer.msg('请输入用户名',{icon:0,time:2000})
+            return
+        }
+        if(!/^[a-zA-Z0-9]{5,11}$/.test(user_id))
+        {
+            layer.msg('账号:5-11位数字或字母',{icon:0,time:2000})
+            return
+        }
+        if(!/^[a-zA-Z0-9]{5,16}$/.test(pass))
+        {
+            layer.msg('密码:5-16位数字或字母',{icon:0,time:2000})
+            return
+        }
+        $.get('{:url("index/index/setAdminUser")}',{user_id,pass,name},function (res){
+            if(res.state == 200)
+            {
+                layer.msg(res.msg,{time:2000},function () {
+                    window.location.reload();
+                })
+                return;
+            }
+            if(res.state == 400)
+            {
+                layer.msg(res.msg,{time:2000})
+                return;
+            }
+        },'json')
+    });
+    function delAdmin(id,user_id) {
+        layer.confirm('确定删除?',function () {
+            $.get('{:url("index/index/delAdmin")}',{user_id,id},function (res){
+                if(res.state == 200)
+                {
+                    layer.msg(res.msg,{time:2000},function () {
+                        window.location.reload();
+                    })
+                    return;
+                }
+                if(res.state == 400)
+                {
+                    layer.msg(res.msg,{time:2000})
+                    return;
+                }
+            },'json')
+            return;
+        })
+    }
+</script>
+{/block}

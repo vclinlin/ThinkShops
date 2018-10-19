@@ -62,7 +62,8 @@
                         <button onclick="Collect('{$data.order_number}',{$data.Id},{$key})" class="btn btn-sm btn-danger">
                             确定收货
                         </button>
-                        <button class="btn btn-sm btn-success">
+                        <button class="btn btn-sm btn-success"
+                                onclick="layer.alert('物流单号:'+'{$data.express}')">
                             查看物流
                         </button>
                     </div>

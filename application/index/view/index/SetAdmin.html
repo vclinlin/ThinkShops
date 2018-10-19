@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>后台登录</title>
+    <script src="__JQ__/jquery-3.3.1.min.js"></script>
+    <link rel="shortcut icon" href="__STATIC__/x-admin/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="__STATIC__/x-admin/css/font.css">
+    <link rel="stylesheet" href="__STATIC__/x-admin/css/xadmin.css">
+    <script src="__STATIC__/x-admin/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="__STATIC__/x-admin/js/xadmin.js"></script>
+</head>
+<body class="login-bg">
+
+<div class="login layui-anim layui-anim-up">
+    <div class="message">设置超级管理员</div>
+    <div id="darkbannerwrap"></div>
+
+    <form class="layui-form" >
+        <input id="user_name" placeholder="用户名"  type="text" class="layui-input" >
+        <hr class="hr15">
+        <input id="user_id" placeholder="用户帐号"  type="text" class="layui-input" >
+        <hr class="hr15">
+        <input id="pass" placeholder="密码"  type="password" class="layui-input">
+        <hr class="hr15">
+        <input value="设置" style="width:100%;" onclick="SetAdmin()" type="button">
+        <hr class="hr20" >
+    </form>
+</div>
+
+<script>
+$('#pass').bind('keypress',function (event) {
+    if(event.keyCode == 13){
+        SetAdmin();
+    }
+})
+    function SetAdmin() {
+        var user_id = $("#user_id").val().trim();
+        var pass = $("#pass").val().trim();
+        var name = $("#user_name").val().trim();
+        if(!name||name.length<=0||name=="")
+        {
+            layer.msg('请输入用户名',{icon:0,time:2000})
+            return
+        }
+        if(!/^[a-zA-Z0-9]{5,11}$/.test(user_id))
+        {
+            layer.msg('账号:5-11位数字或字母',{icon:0,time:2000})
+            return
+        }
+        if(!/^[a-zA-Z0-9]{5,16}$/.test(pass))
+        {
+            layer.msg('密码:5-16位数字或字母',{icon:0,time:2000})
+            return
+        }
+        $.get('{:url("index/index/setAdmin")}',{user_id,pass,name},function (res) {
+            if(res.state == 200)
+            {
+                layer.msg(res.msg,{time:2000},function () {
+                    window.location.reload();
+                })
+                return;
+            }
+            if(res.state == 400)
+            {
+                layer.msg(res.msg,{time:2000})
+                return;
+            }
+        })
+    }
+</script>
+</body>
+</html>

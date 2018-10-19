@@ -9,13 +9,43 @@ use think\Session;
 class Index extends Controller
 {
     public $beforeActionList = [
-        'LandingDetection'=> ['except'=>'login,logins,login_state'],
+        'LandingDetection'=> ['except'=>'login,logins,login_state,setadmin'],
         'SignIn'=>['only'=>'login'],
     ];
     //登录界面
     public function login()
     {
+        $model = new Admin_user();
+        if(count($model->all()) == 0)
+        {
+            return $this->fetch('SetAdmin');
+        }
         return $this->fetch();
+    }
+
+    public function SetAdmin($user_id,$pass,$name)
+    {
+        $model = new Admin_user();
+        if(count($model->all()) > 0)
+        {
+            return $this->redirect('/');
+        }
+        //没有超级用户
+        $pass = md5(md5($user_id).md5($pass).md5("!@#$%^&*()_+"));
+        if(!$model->insert(['user_id'=>$user_id,'pass'=>$pass,'creation_time'=>time(),
+            'grade'=>9,'user_name'=>htmlentities($name)]))
+        {
+            echo json_encode([
+                'state'=>400,
+                'msg'=>'设置失败'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>200,
+            'msg'=>'设置完成'
+        ]);
+        return;
     }
 
     public function login_state($user_id)

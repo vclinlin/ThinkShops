@@ -10,6 +10,7 @@ namespace app\index\controller;
 
 
 use app\index\model\Admin_user;
+use app\index\model\Freight;
 use app\index\model\Order_book;
 use think\Session;
 
@@ -323,5 +324,64 @@ class Order extends Index
         $this->assign('data',$order_data);
         $this->assign('page',$order_data->render());
         return $this->fetch();
+    }
+    //物流价格
+    public function logistics($id=0,$money=0)
+    {
+        $model = new Freight();
+        if($id==0||$money==0)
+        {
+            $data = $model->all();
+            $this->assign('data',$data);
+            return $this->fetch();
+        }
+        //不存在
+        if(!$model->get(['Id'=>$id])&&($id==1||$id==2))
+        {
+            $id == 1?$pay_id=0:$pay_id=1;
+            if(!$model->insert(
+                [
+                    'pay_id'=>$pay_id,
+                    'Id'=>$id,
+                    'money'=>$money
+                ]
+            )){
+                echo json_encode([
+                    'state'=>400,
+                    'msg'=>'设置失败'
+                ]);
+                return;
+            };
+            echo json_encode([
+                'state'=>200,
+                'msg'=>'设置完成'
+            ]);
+            return;
+        }
+        //存在
+        if($model->get(['Id'=>$id])&&($id==1||$id==2))
+        {
+            $id == 1?$pay_id=0:$pay_id=1;
+            if(!$model->where([
+                    'pay_id'=>$pay_id,
+                    'Id'=>$id
+                ])->update(['money'=>$money])){
+                echo json_encode([
+                    'state'=>400,
+                    'msg'=>'设置失败'
+                ]);
+                return;
+            };
+            echo json_encode([
+                'state'=>200,
+                'msg'=>'设置完成'
+            ]);
+            return;
+        }
+        echo json_encode([
+            'state'=>400,
+            'msg'=>'拒绝访问'
+        ]);
+        return;
     }
 }

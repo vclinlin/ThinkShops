@@ -1,0 +1,80 @@
+{extend name="bases" /}
+
+{block name="title"}支付设置{/block}
+
+{block name="static"}
+{/block}
+
+{block name="body"}
+<ul class="breadcrumb small">
+    <li class="breadcrumb-item active">首页</li>
+    <li class="breadcrumb-item active">支付设置</li>
+    <li class="breadcrumb-item active">价格设置</li>
+</ul>
+<div class="container-fluid">
+    <div class="col-12 d-inline-flex justify-content-between border-bottom p-1">
+        <strong>价格设置:</strong>
+        <button class="btn-sm btn btn-success"  onclick="window.location.reload()"><i class="fa fa-refresh"></i></button>
+    </div>
+    <div class="col-12  mt-2 col-sm-6 col-lg-4">
+        <div class="form-group">
+            <label for="payA">在线支付(物流价格):</label>
+            <div class="input-group mb-3">
+                <input type="text" id="payA" class="form-control" placeholder="0.00">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="submit"
+                            onclick="setLogistics(1,'payA')">确定</button>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="payB">货到付款(物流价格):</label>
+            <div class="input-group mb-3">
+                <input type="text" id="payB" class="form-control" placeholder="0.00">
+                <div class="input-group-append">
+                    <button class="btn btn-success" onclick="setLogistics(2,'payB')"
+                     type="button">确定</button>
+                </div>
+            </div>
+        </div>
+        <table class="table">
+            {volist id="data" name="data"}
+            <tr>
+                <td>支付方式: {$data.pay_id==0?"在线支付":"货到付款"}</td>
+                <td>金额: {$data.money}</td>
+            </tr>
+            {/volist}
+        </table>
+    </div>
+</div>
+
+<script>
+function setLogistics(id,IdName) {
+    var money = Number($('#'+IdName).val().trim());
+    if(!/^\d+(\.[0-9]{1,2})?$/.test(money))
+    {
+        layer.msg('请输入最多两位小数价格');
+        return;
+    }
+    if(!money>0)
+    {
+        layer.msg('请输入最多两位小数价格');
+        return;
+    }
+    $.get('{:url("/index/Order/logistics")}',{id,money},function (res) {
+        if(res.state==200)
+        {
+            layer.msg(res.msg,{time:2000},function () {
+                window.location.reload()
+            });
+            return;
+        }
+        if(res.state==400)
+        {
+            layer.msg(res.msg);
+            return;
+        }
+    },'json');
+}
+</script>
+{/block}
